@@ -4,9 +4,23 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredAddons[] = {};
-		fileName = "life_server.pbo";
-		author[] = { "Fank", "nano2k" };
+		fileName = "bgd_server.pbo";
+		author[] = {"Fank", "nano2k"};
 	};
 };
 
-class CfgFunctions {};
+class CfgFunctions {
+	class Database {
+		class MySQL {
+			class queryPlayer {};
+			class queryVehicle {};
+			class queryVehicles {};
+		};
+	};
+	class RGM {
+		class System {
+			class getVehicles {};
+			class buyVehicle {};
+		};
+	};
+};
