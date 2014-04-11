@@ -1,6 +1,6 @@
-author = $STR_MISSION_AUTHORS;
-onLoadName = $STR_MISSION_NAME;
-onLoadMission = $STR_MISSION_SHORT_DESCRIPTION;
+author = $STR_BGD_MISSION_AUTHORS;
+onLoadName = $STR_BGD_MISSION_NAME;
+onLoadMission = $STR_BGD_MISSION_SHORT_DESCRIPTION;
 joinUnassigned = 1;
 respawn = BASE;
 respawndelay = 10;
@@ -11,7 +11,7 @@ class Header
 {
 	gameType = SC;
 	minPlayers = 1;
-	maxPlayers = 50;
+	maxPlayers = 75;
 };
 
 class RscTitles
@@ -21,7 +21,7 @@ class RscTitles
 
 class CfgFunctions
 {
-	#include "Functions.h"
+	
 };
 
 class CfgSounds

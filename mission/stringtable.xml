@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="BattlegroundDomination">
 	<Package name="Mission">
-		<Key ID="STR_MISSION_NAME">
+		<Key ID="STR_BGD_MISSION_SHORT_NAME">
+			<Original>Altis Battleground: Domination</Original>
+		</Key>
+		<Key ID="STR_BGD_MISSION_NAME">
 			<Original>Altis Battleground: Domination Milestone 0.1</Original>
 		</Key>
-		<Key ID="STR_MISSION_AUTHORS">
+		<Key ID="STR_BGD_MISSION_AUTHORS">
 			<Original>Fank and nano2k</Original>
 			<German>Fank und nano2k</German>
 		</Key>
-		<Key ID="STR_MISSION_SHORT_DESCRIPTION">
+		<Key ID="STR_BGD_MISSION_SHORT_DESCRIPTION">
 			<Original>A fast paced game mode with a persistent battlefield</Original>
+		</Key>
+		<Key ID="STR_BGD_FEDERAL_SLOT">
+			<Original>federal agent</Original>
+			<German>Bundesagent</German>
+		</Key>
+		<Key ID="STR_BGD_PMC_SLOT">
+			<Original>private military contractor</Original>
+			<German>PMC</German>
+		</Key>
+		<Key ID="STR_BGD_GUER_SLOT">
+			<Original>rebel</Original>
+			<German>Rebell</German>
 		</Key>
 	</Package>
 </Project>
