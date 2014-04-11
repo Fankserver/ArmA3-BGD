@@ -1,2 +1,2 @@
-random_game_mode_1
-==================
+ArmA 3 Alits Battleground: Domination
+=====================================
