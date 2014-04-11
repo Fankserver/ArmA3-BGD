@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="BattlegroundDomination">
+	<Package name="Mission">
+		<Key ID="STR_MISSION_NAME">
+			<Original>Altis Battleground: Domination Milestone 0.1</Original>
+		</Key>
+		<Key ID="STR_MISSION_AUTHORS">
+			<Original>Fank and nano2k</Original>
+			<German>Fank und nano2k</German>
+		</Key>
+		<Key ID="STR_MISSION_SHORT_DESCRIPTION">
+			<Original>A fast paced game mode with a persistent battlefield</Original>
+		</Key>
+	</Package>
+</Project>
+</xml>

@@ -8,7 +8,6 @@ class Mission
 	};
 	addOnsAuto[]=
 	{
-		"A3_Modules_F_Multiplayer",
 		"a3_map_altis"
 	};
 	randomSeed=3483010;
@@ -30,134 +29,29 @@ class Mission
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
 	};
-	class Groups
+	class Markers
 	{
-		items=1;
+		items=3;
 		class Item0
 		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={23573.369,3.1900001,18260.705};
-					placement=20;
-					class args
-					{
-						items=4;
-						class Item0
-						{
-							value="";
-							parentCls="ModuleRespawnPosition_F";
-							typeName="Name";
-						};
-						class Item1
-						{
-							value="0";
-							parentCls="ModuleRespawnPosition_F";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="1";
-							parentCls="ModuleRespawnPosition_F";
-							typeName="Side";
-						};
-						class Item3
-						{
-							value="0";
-							parentCls="ModuleRespawnPosition_F";
-							typeName="Marker";
-						};
-					};
-					id=0;
-					side="LOGIC";
-					vehicle="ModuleRespawnPosition_F";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="WestSpawn01";
-				};
-				class Item1
-				{
-					position[]={23639.615,3.1900001,18296.41};
-					placement=20;
-					class args
-					{
-						items=4;
-						class Item0
-						{
-							value="";
-							parentCls="ModuleRespawnPosition_F";
-							typeName="Name";
-						};
-						class Item1
-						{
-							value="0";
-							parentCls="ModuleRespawnPosition_F";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="2";
-							parentCls="ModuleRespawnPosition_F";
-							typeName="Side";
-						};
-						class Item3
-						{
-							value="0";
-							parentCls="ModuleRespawnPosition_F";
-							typeName="Marker";
-						};
-					};
-					id=1;
-					side="LOGIC";
-					vehicle="ModuleRespawnPosition_F";
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="ResistanceSpawn01";
-				};
-				class Item2
-				{
-					position[]={23642.836,3.1900001,18229.309};
-					placement=20;
-					class args
-					{
-						items=4;
-						class Item0
-						{
-							value="";
-							parentCls="ModuleRespawnPosition_F";
-							typeName="Name";
-						};
-						class Item1
-						{
-							value="0";
-							parentCls="ModuleRespawnPosition_F";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="3";
-							parentCls="ModuleRespawnPosition_F";
-							typeName="Side";
-						};
-						class Item3
-						{
-							value="0";
-							parentCls="ModuleRespawnPosition_F";
-							typeName="Marker";
-						};
-					};
-					id=2;
-					side="LOGIC";
-					vehicle="ModuleRespawnPosition_F";
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="CivilianSpawn01";
-				};
-			};
+			position[]={23618.512,3.1900001,18281.625};
+			name="respawn_west_01";
+			type="mil_circle";
+			colorName="ColorWEST";
+		};
+		class Item1
+		{
+			position[]={23675.768,3.1900001,18268.902};
+			name="respawn_guerilla_01";
+			type="mil_circle";
+			colorName="ColorGUER";
+		};
+		class Item2
+		{
+			position[]={23634.174,3.1900001,18230.246};
+			name="respawn_civilian_01";
+			type="mil_circle";
+			colorName="ColorCIV";
 		};
 	};
 };
