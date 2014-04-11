@@ -1,2 +1,2 @@
-ArmA 3 Alits Battleground: Domination
+ArmA 3 Altis Battleground: Domination
 =====================================
