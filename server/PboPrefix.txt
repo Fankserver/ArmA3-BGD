@@ -1,1 +1,1 @@
-rgm_server
+bgd_server
