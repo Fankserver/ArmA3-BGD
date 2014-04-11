@@ -1,0 +1,18 @@
+/*
+	Copyright © 2014 Florian "Fank" Kinder, All rights reserved
+	File: fn_getVehicles.sqf
+	Author: Florian "Fank" Kinder
+
+	Description:
+	Sends a request to query the database information and returns vehicles
+	for the players side.
+*/
+private ["_player","_playerSide","_vehicles"];
+_player = [_this,0,objNull,[objNull]] call BIS_fnc_param;
+
+if (_player == objNull) exitWith {};
+
+_playerSide = str(side _player);
+if (!(_playerSide in ["WEST","GUER","CIV"])) exitWith {};
+
+_vehicles = [_playerSide] call Database_fnc_queryVehicles;

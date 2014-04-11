@@ -14,7 +14,7 @@ _vehicleId = [_this,0,0,[0]] call BIS_fnc_param;
 if (_vehicleId == 0) exitWith {"Invalid PlayerId"};
 
 _vehicle = [];
-_sql = "Alits-Life-Hive" callExtension format ["100:%1", _vehicleId];
+_sql = "Alits-Life-Hive" callExtension format ["401:%1", _vehicleId];
 _sql = call compile format["%1", _sql];
 if (count _sql > 0) then {
 
