@@ -1,6 +1,6 @@
 class BGD_ShopLandVehicle {
 	idd = 1000;
-	name= "BGD_ShopLandVehicle";
+	name = "BGD_ShopLandVehicle";
 	movingEnable = false;
 	enableSimulation = true;
 
