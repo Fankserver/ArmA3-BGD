@@ -28,6 +28,7 @@ class CfgFunctions {
 			file = "\bgd_server\functions\System";
 			class getVehicles {};
 			class buyVehicle {};
+			class handleRespawn {};
 		};
 	};
 };
