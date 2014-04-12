@@ -15,6 +15,10 @@ class CfgFunctions {
 			class queryPlayer {};
 			class queryVehicle {};
 			class queryVehicles {};
+			class updatePlayerMoney {};
+		};
+		class Converter {
+			class numberSafe {};
 		};
 	};
 	class RGM {
