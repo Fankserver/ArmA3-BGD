@@ -10,6 +10,8 @@
 private ["_playerSide","_vehicles","_sql"];
 _playerSide = [_this,0,"",[""]] call BIS_fnc_param;
 
+diag_log _playerSide;
+
 // Verify player
 if (_playerSide == "") exitWith {"Invalid PlayerSide"};
 

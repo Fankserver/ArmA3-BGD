@@ -10,6 +10,8 @@ private["_vehicles","_control"];
 disableSerialization;
 _vehicles = [_this,0,[],[[]]] call BIS_fnc_param;
 
+diag_log _vehicles;
+
 waitUntil {!isNull (findDisplay 1000)};
 
 if(count _vehicles == 0) exitWith {
