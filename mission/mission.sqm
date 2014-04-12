@@ -1048,7 +1048,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Fahrzeuge"",BGD_fnc_shopVehicles,[1],0,false,false,"""",'vehicle player == player && playerSide == west'];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Fahrzeuge"",BGD_fnc_shopVehicles,1,0,false,false,"""",'vehicle player == player && playerSide == west'];";
 				};
 				class Item2
 				{
@@ -1059,7 +1059,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Fahrzeuge"",BGD_fnc_shopVehicles,[2],0,false,false,"""",'vehicle player == player && playerSide == west'];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Fahrzeuge"",BGD_fnc_shopVehicles,2,0,false,false,"""",'vehicle player == player && playerSide == west'];";
 				};
 				class Item3
 				{
@@ -1070,7 +1070,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Fahrzeuge"",BGD_fnc_shopVehicles,[3],0,false,false,"""",'vehicle player == player && playerSide == west'];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Fahrzeuge"",BGD_fnc_shopVehicles,3,0,false,false,"""",'vehicle player == player && playerSide == west'];";
 				};
 			};
 		};

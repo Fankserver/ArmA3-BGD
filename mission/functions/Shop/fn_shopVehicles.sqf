@@ -7,7 +7,7 @@
 	-
 */
 private ["_vehicleType"];
-_vehicleType = [_this,0,0,[0]] call BIS_fnc_param;
+_vehicleType = [_this,3,0,[0]] call BIS_fnc_param;
 
 if (_vehicleType == 0) exitWith {
 	hint "UNKNOWN VEHICLE TYPE";
