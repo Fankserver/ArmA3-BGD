@@ -1,5 +1,5 @@
 /*
-	Copyright © 2014 Florian "Fank" Kinder, All rights reserved
+	Copyright Â© 2014 Florian "Fank" Kinder, All rights reserved
 	File: fn_getVehicles.sqf
 	Author: Florian "Fank" Kinder
 
@@ -16,3 +16,5 @@ _playerSide = str(side _player);
 if (!(_playerSide in ["WEST","GUER","CIV"])) exitWith {};
 
 _vehicles = [_playerSide] call Database_fnc_queryVehicles;
+
+[_vehicles, "BGD_fnc_showLandVehicles", (owner _player)] spawn BIS_fnc_MP;

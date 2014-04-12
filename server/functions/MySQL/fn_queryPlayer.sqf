@@ -1,5 +1,5 @@
 /*
-	Copyright © 2014 Florian "Fank" Kinder, All rights reserved
+	Copyright Â© 2014 Florian "Fank" Kinder, All rights reserved
 	File: fn_queryPlayer.sqf
 	Author: Florian "Fank" Kinder
 
