@@ -14,9 +14,8 @@ class Header
 	maxPlayers = 75;
 };
 
-class RscTitles
-{
-
+class RscTitles {
+	#include "dialog\shopLandVehicle.hpp"
 };
 
 class CfgFunctions {
@@ -26,6 +25,9 @@ class CfgFunctions {
 		};
 		class Shop {
 			class shopVehicles {};
+		};
+		class Dialog {
+			class showLandVehicles {};
 		};
 	};
 };
