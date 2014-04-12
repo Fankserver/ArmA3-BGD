@@ -15,5 +15,5 @@ if(isNil "_vehicle") exitWith {hint "Fehler bei der Auswahl"};
 
 _spawnObject = nearestObject [(getPos player), "Land_HelipadEmpty_F"];
 
-[[player, _vehicleId, _spawnObject], "BGDS_fnc_buyVehicle"] spawn life_fnc_MP;
+[[player, _vehicleId, _spawnObject], "BGDS_fnc_buyVehicle"] spawn BIS_fnc_MP;
 hint "Spawne Fahrzeug. Einen Moment bitte...";
