@@ -32,9 +32,8 @@ _vehiclePrice = (parseNumber (_vehicleData select 2));
 // Enought money to buy the vehicle
 if (_playerMoney >= _vehiclePrice) then {
 	_playerMoney = (_playerMoney - _vehiclePrice);
-	_playerMoney = [_playerMoney] call Database_fnc_numberSafe;
 
-	[_playerUid,1,"0"] spawn Database_fnc_updatePlayerMoney; // Update Cash
+	[_playerUid,1,0] spawn Database_fnc_updatePlayerMoney; // Update Cash
 	[_playerUid,2,_playerMoney] spawn Database_fnc_updatePlayerMoney; // Update Bank
 }
 else {

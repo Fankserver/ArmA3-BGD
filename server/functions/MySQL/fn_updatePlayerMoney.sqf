@@ -10,10 +10,12 @@
 private ["_vehicleId","_vehicle","_sql"];
 _playerUid = [_this,0,"",[""]] call BIS_fnc_param;
 _playerMoney = [_this,1,0,[0]] call BIS_fnc_param;
-_moneyType = [_this,1,0,[0]] call BIS_fnc_param;
+_moneyType = [_this,2,0,[0]] call BIS_fnc_param;
 
 // Verify playerid
 if (_playerUid == "") exitWith {"Invalid PlayerUid"};
+
+_playerMoney = [_playerMoney] call Database_fnc_numberSafe;
 
 // Cash update
 if (_moneyType == 1) then {

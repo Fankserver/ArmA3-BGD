@@ -21,7 +21,7 @@ class CfgFunctions {
 			class numberSafe {};
 		};
 	};
-	class RGM {
+	class BGDS {
 		class System {
 			class getVehicles {};
 			class buyVehicle {};
