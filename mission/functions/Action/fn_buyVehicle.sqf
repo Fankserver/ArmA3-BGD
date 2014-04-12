@@ -1,9 +1,10 @@
 /*
-	File: fn_unimpound.sqf
-	Author: Bryan "Tonic" Boardwine
+	Copyright © 2014 Florian "Fank" Kinder, All rights reserved
+	File: fn_buyVehicle.sqf
+	Author: Florian "Fank" Kinder
 
 	Description:
-	Yeah... Gets the vehicle from the garage.
+	-
 */
 private["_vehicle","_vehicleId","_spawnObject"];
 disableSerialization;
