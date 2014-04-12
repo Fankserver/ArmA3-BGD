@@ -38,6 +38,7 @@ if (_playerMoney >= _vehiclePrice) then {
 	[_playerUid,2,_playerMoney] spawn Database_fnc_updatePlayerMoney; // Update Bank
 
 	_vehicle = (_vehicleData select 1) createVehicle (getPos _spawnObject);
+	_vehicle setDir (getDir _spawnObject);
 	[_vehicle] call BGDS_fnc_initVehicle;
 }
 else {

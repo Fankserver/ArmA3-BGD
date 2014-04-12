@@ -12,3 +12,8 @@ _vehicle = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 waitUntil {_vehicle != objNull};
 
 _vehicle disableTIEquipment true;
+
+clearItemCargoGlobal _vehicle;
+clearMagazineCargoGlobal _vehicle;
+clearWeaponCargoGlobal _vehicle;
+clearBackpackCargoGlobal _vehicle;
