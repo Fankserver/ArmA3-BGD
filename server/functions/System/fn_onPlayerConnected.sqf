@@ -11,3 +11,4 @@ _player = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 _jip = [_this,1,false,[false]] call BIS_fnc_param;
 
 _player addEventHandler ["Respawn", BGDS_fnc_handleRespawn];
+_player addEventHandler ["Killed", BGDS_fnc_handleKill];
