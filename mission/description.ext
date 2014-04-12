@@ -34,6 +34,7 @@ class CfgFunctions {
 			class numberText {};
 			class handleDamage {};
 			class localRespawn {};
+			class serverMessage {};
 		};
 	};
 };
