@@ -39,7 +39,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=3;
+		items=4;
 		class Item0
 		{
 			side="WEST";
@@ -427,7 +427,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_2";
 					description="@STR_BGD_PMC_SLOT";
@@ -441,7 +440,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_3";
 					description="@STR_BGD_PMC_SLOT";
@@ -455,7 +453,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_4";
 					description="@STR_BGD_PMC_SLOT";
@@ -469,7 +466,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_5";
 					description="@STR_BGD_PMC_SLOT";
@@ -483,7 +479,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_6";
 					description="@STR_BGD_PMC_SLOT";
@@ -497,7 +492,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_7";
 					description="@STR_BGD_PMC_SLOT";
@@ -511,7 +505,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_8";
 					description="@STR_BGD_PMC_SLOT";
@@ -525,7 +518,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_9";
 					description="@STR_BGD_PMC_SLOT";
@@ -539,7 +531,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_10";
 					description="@STR_BGD_PMC_SLOT";
@@ -553,7 +544,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_11";
 					description="@STR_BGD_PMC_SLOT";
@@ -567,7 +557,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_12";
 					description="@STR_BGD_PMC_SLOT";
@@ -581,7 +570,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_13";
 					description="@STR_BGD_PMC_SLOT";
@@ -595,7 +583,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_14";
 					description="@STR_BGD_PMC_SLOT";
@@ -609,7 +596,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_15";
 					description="@STR_BGD_PMC_SLOT";
@@ -623,7 +609,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_16";
 					description="@STR_BGD_PMC_SLOT";
@@ -637,7 +622,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_17";
 					description="@STR_BGD_PMC_SLOT";
@@ -651,7 +635,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_18";
 					description="@STR_BGD_PMC_SLOT";
@@ -665,7 +648,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_19";
 					description="@STR_BGD_PMC_SLOT";
@@ -679,7 +661,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_20";
 					description="@STR_BGD_PMC_SLOT";
@@ -693,7 +674,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_21";
 					description="@STR_BGD_PMC_SLOT";
@@ -707,7 +687,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_22";
 					description="@STR_BGD_PMC_SLOT";
@@ -721,7 +700,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_23";
 					description="@STR_BGD_PMC_SLOT";
@@ -735,7 +713,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_24";
 					description="@STR_BGD_PMC_SLOT";
@@ -749,7 +726,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.69999999;
 					text="civ_25";
 					description="@STR_BGD_PMC_SLOT";
@@ -1111,6 +1087,40 @@ class Mission
 					text="reb_24";
 					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
+				};
+			};
+		};
+		class Item3
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={14086.34,11.547821,11557.55};
+					azimut=-201.908;
+					special="NONE";
+					id=75;
+					side="CIV";
+					vehicle="C_man_1";
+					leader=1;
+					rank="COLONEL";
+					skill=0.60000002;
+					text="master_group";
+					init="this enableSimulation false; this allowDamage false; this hideObject true;";
+					description="Master Group for NPC's";
+				};
+				class Item1
+				{
+					position[]={23673.496,3.1900001,18230.223};
+					azimut=-201.908;
+					special="NONE";
+					id=76;
+					side="CIV";
+					vehicle="C_man_1";
+					skill=0.60000002;
+					init="this enableSimulation false; this allowDamage false; this addAction[""Fahrzeuge"",BGD_fnc_shopVehicles,nil,0,false,false,"""",'vehicle player == player && playerSide == west'];";
 				};
 			};
 		};
