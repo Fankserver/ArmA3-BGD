@@ -62,7 +62,7 @@ class BGD_ShopVehicle {
 		class GetCar : BGD_RscButtonMenu {
 			idc = -1;
 			text = "Buy";
-			onButtonClick = "[] call BGD_fnc_buyVehicle";
+			onButtonClick = "[] call BGD_fnc_buyVehicle; closeDialog 0;";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);

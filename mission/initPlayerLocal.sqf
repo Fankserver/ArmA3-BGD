@@ -4,3 +4,5 @@ player addEventHandler ["Respawn", BGD_fnc_localRespawn];
 [player] call BGD_fnc_localRespawn;
 
 BGD_money = 0;
+
+[] execFSM "client.fsm";

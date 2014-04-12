@@ -1,6 +1,6 @@
 /*
 	Copyright © 2014 Florian "Fank" Kinder, All rights reserved
-	File: fn_queryPlayer.sqf
+	File: fn_updatePlayerMoney.sqf
 	Author: Florian "Fank" Kinder
 
 	Description:
