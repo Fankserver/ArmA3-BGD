@@ -10,9 +10,15 @@
 private ["_player","_vehicleId","_playerUid","_playerData","_vehicleData","_playerMoney","_vehiclePrice"];
 _player = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 _vehicleId = [_this,1,0,[0]] call BIS_fnc_param;
+_spawnObject = [_this,2,objNull,[objNull]] call BIS_fnc_param;
+
+diag_log _this;
+diag_log _player;
+diag_log _vehicleId;
+diag_log _spawnObject;
 
 // Validate parameter
-if (_player == objNull || _vehicleId == 0) exitWith {};
+if (_player == objNull || _vehicleId == 0 || _spawnObject == objNull) exitWith {};
 
 // Get player uid
 _playerUid = getPlayerUID _player;
@@ -35,6 +41,8 @@ if (_playerMoney >= _vehiclePrice) then {
 
 	[_playerUid,1,0] spawn Database_fnc_updatePlayerMoney; // Update Cash
 	[_playerUid,2,_playerMoney] spawn Database_fnc_updatePlayerMoney; // Update Bank
+
+	(_vehicleData select 1) createVehicle (getPos _spawnObject);
 }
 else {
 
