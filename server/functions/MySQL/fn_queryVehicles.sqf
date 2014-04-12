@@ -10,12 +10,10 @@
 private ["_playerSide","_vehicles","_sql"];
 _playerSide = [_this,0,"",[""]] call BIS_fnc_param;
 
-diag_log _playerSide;
-
 // Verify player
 if (_playerSide == "") exitWith {"Invalid PlayerSide"};
 
 _vehicles = [];
-_sql = "Alits-Life-Hive" callExtension format ["400:%1", _playerSide];
+_sql = "Altis-Life-Hive" callExtension format ["400:%1", _playerSide];
 _vehicles = call compile format["%1", _sql];
 _vehicles;

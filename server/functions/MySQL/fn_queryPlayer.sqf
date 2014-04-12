@@ -14,7 +14,7 @@ _playerUid = [_this,0,"",[""]] call BIS_fnc_param;
 if (_playerUid == "") exitWith {"Invalid PlayerId"};
 
 _player = [];
-_sql = "Alits-Life-Hive" callExtension format ["100:%1", _playerUid];
+_sql = "Altis-Life-Hive" callExtension format ["100:%1", _playerUid];
 _sql = call compile format["%1", _sql];
 if (count _sql > 0) then {
 

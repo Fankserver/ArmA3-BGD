@@ -14,6 +14,6 @@ _vehicleId = [_this,0,0,[0]] call BIS_fnc_param;
 if (_vehicleId == 0) exitWith {"Invalid VehicleId"};
 
 _vehicle = [];
-_sql = "Alits-Life-Hive" callExtension format ["401:%1", _vehicleId];
+_sql = "Altis-Life-Hive" callExtension format ["401:%1", _vehicleId];
 _vehicle = call compile format["%1", _sql];
 _vehicle;
