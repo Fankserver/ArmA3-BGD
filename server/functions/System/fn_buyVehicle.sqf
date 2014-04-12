@@ -40,6 +40,8 @@ if (_playerMoney >= _vehiclePrice) then {
 	_vehicle = (_vehicleData select 1) createVehicle (getPos _spawnObject);
 	_vehicle setDir (getDir _spawnObject);
 	[_vehicle] call BGDS_fnc_initVehicle;
+
+	[[_playerMoney], "BGD_fnc_moneyUpdate", (owner _player)] spawn BIS_fnc_MP;
 }
 else {
 	[[2, "OUT OF MONEY"], "BGD_fnc_serverMessage", (owner _player)] spawn BIS_fnc_MP;
