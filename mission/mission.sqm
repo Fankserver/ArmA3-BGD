@@ -71,7 +71,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_2";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item2
@@ -84,7 +83,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_3";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item3
@@ -97,7 +95,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_4";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item4
@@ -110,7 +107,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_5";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item5
@@ -123,7 +119,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_6";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item6
@@ -136,7 +131,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_7";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item7
@@ -149,7 +143,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_8";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item8
@@ -162,7 +155,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_9";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item9
@@ -175,7 +167,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_10";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item10
@@ -188,7 +179,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_11";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item11
@@ -201,7 +191,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_12";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item12
@@ -214,7 +203,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_13";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item13
@@ -227,7 +215,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_14";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item14
@@ -240,7 +227,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_14";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item15
@@ -253,7 +239,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_15";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item16
@@ -266,7 +251,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_16";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item17
@@ -279,7 +263,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_17";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item18
@@ -292,7 +275,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_18";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item19
@@ -305,7 +287,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_19";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item20
@@ -318,7 +299,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_20";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item21
@@ -331,7 +311,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_21";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item22
@@ -344,7 +323,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_22";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item23
@@ -357,7 +335,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_23";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item24
@@ -370,7 +347,6 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_24";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item25
@@ -735,7 +711,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_1";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item1
@@ -749,7 +724,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_2";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item2
@@ -763,7 +737,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_3";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item3
@@ -777,7 +750,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_4";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item4
@@ -791,7 +763,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_5";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item5
@@ -805,7 +776,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_6";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item6
@@ -819,7 +789,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_7";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item7
@@ -833,7 +802,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_8";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item8
@@ -847,7 +815,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_9";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item9
@@ -861,7 +828,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_10";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item10
@@ -875,7 +841,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_11";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item11
@@ -889,7 +854,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_12";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item12
@@ -903,7 +867,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_13";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item13
@@ -917,7 +880,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_14";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item14
@@ -931,7 +893,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_14";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item15
@@ -945,7 +906,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_15";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item16
@@ -959,7 +919,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_16";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item17
@@ -973,7 +932,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_17";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item18
@@ -987,7 +945,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_18";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item19
@@ -1001,7 +958,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_19";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item20
@@ -1015,7 +971,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_20";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item21
@@ -1029,7 +984,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_21";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item22
@@ -1043,7 +997,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_22";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item23
@@ -1057,7 +1010,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_23";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item24
@@ -1071,7 +1023,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_24";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 			};
