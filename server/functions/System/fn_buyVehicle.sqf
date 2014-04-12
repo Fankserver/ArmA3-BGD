@@ -42,5 +42,5 @@ if (_playerMoney >= _vehiclePrice) then {
 	[_vehicle] call BGDS_fnc_initVehicle;
 }
 else {
-
+	[[2, "OUT OF MONEY"], "BGD_fnc_serverMessage", (owner _player)] spawn BIS_fnc_MP;
 };
