@@ -59,7 +59,6 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="fed_1";
-					init="removeBackpack this; removeAllWeapons this;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item1

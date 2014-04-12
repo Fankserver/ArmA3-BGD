@@ -33,6 +33,7 @@ class CfgFunctions {
 		class System {
 			class numberText {};
 			class handleDamage {};
+			class localRespawn {};
 		};
 	};
 };
