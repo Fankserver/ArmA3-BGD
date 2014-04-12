@@ -3,7 +3,7 @@
 	<Package name="BGDMission">
 		<Container name="MissionFramework">
 			<Key ID="str_bgd_mission_short_name">
-				<Original>Altis Battleground: Domination</Original>
+				<Original>Battleground Domination</Original>
 			</Key>
 			<Key ID="str_bgd_mission_name">
 				<Original>Altis Battleground: Domination Milestone 0.1</Original>
