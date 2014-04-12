@@ -10,4 +10,4 @@ private ["_player","_corpse"];
 _victim = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 _killer = [_this,1,objNull,[objNull]] call BIS_fnc_param;
 
-[[0, format ["%1 wurde von %2 eliminiert", _player, _killer]], "BGD_fnc_serverMessage"] BIS_fnc_MP;
+[[0, format ["%1 wurde von %2 eliminiert", _player, _killer]], "BGD_fnc_serverMessage"] spawn BIS_fnc_MP;
