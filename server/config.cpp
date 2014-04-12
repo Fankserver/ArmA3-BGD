@@ -29,7 +29,7 @@ class CfgFunctions {
 			class getVehicles {};
 			class buyVehicle {};
 			class initVehicle {};
-			class handleRespawn {};
+			//class handleRespawn {};
 			class handleKill {};
 			class onPlayerConnected {};
 		};
