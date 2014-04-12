@@ -5,7 +5,7 @@ class BGD_ShopLandVehicle {
 	enableSimulation = true;
 
 	class controlsBackground {
-		class RscTitleBackground: RscText {
+		class RscTitleBackground: BGD_RscText {
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 			idc = -1;
 			x = 0.1;
@@ -14,7 +14,7 @@ class BGD_ShopLandVehicle {
 			h = (1 / 25);
 		};
 
-		class MainBackground: RscText {
+		class MainBackground: BGD_RscText {
 			colorBackground[] = {0, 0, 0, 0.7};
 			idc = -1;
 			x = 0.1;
@@ -25,7 +25,7 @@ class BGD_ShopLandVehicle {
 	};
 
 	class controls {
-		class Title: RscTitle {
+		class Title: BGD_RscTitle {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = -1;
 			text = "Land vehicle shop";
@@ -41,7 +41,7 @@ class BGD_ShopLandVehicle {
 			text = "";
 		};
 
-		class VehicleList: RscListBox {
+		class VehicleList: BGD_RscListBox {
 			idc = 1002;
 			text = "";
 			sizeEx = 0.035;
@@ -49,7 +49,7 @@ class BGD_ShopLandVehicle {
 			w = 0.56; h = 0.370;
 		};
 
-		class CloseButtonKey : RscButtonMenu {
+		class CloseButtonKey : BGD_RscButtonMenu {
 			idc = -1;
 			text = "Close";
 			onButtonClick = "closeDialog 0;";
@@ -59,7 +59,7 @@ class BGD_ShopLandVehicle {
 			h = (1 / 25);
 		};
 
-		class GetCar : RscButtonMenu {
+		class GetCar : BGD_RscButtonMenu {
 			idc = -1;
 			text = "Buy";
 			onButtonClick = "[] call life_fnc_unimpound";
