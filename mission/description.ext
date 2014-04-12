@@ -14,10 +14,10 @@ class Header
 	maxPlayers = 75;
 };
 
-class RscTitles {
-	#include "dialog\common.hpp"
-	#include "dialog\shopLandVehicle.hpp"
-};
+#include "dialog\common.hpp"
+#include "dialog\shopLandVehicle.hpp"
+
+class RscTitles {};
 
 class CfgFunctions {
 	class BGD {
@@ -37,12 +37,6 @@ class CfgFunctions {
 	};
 };
 
-class CfgSounds
-{
+class CfgSounds {};
 
-};
-
-class CfgNotifications
-{
-
-};
+class CfgNotifications {};

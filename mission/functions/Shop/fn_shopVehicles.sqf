@@ -1,4 +1,4 @@
-createDialog "BGD_ShopLandVehicle";
+createDialog "BGD_ShopLandVehicle1";
 
 disableSerialization;
 

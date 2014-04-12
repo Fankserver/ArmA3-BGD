@@ -16,5 +16,4 @@ _playerSide = str(side _player);
 if (!(_playerSide in ["WEST","GUER","CIV"])) exitWith {};
 
 _vehicles = [_playerSide] call Database_fnc_queryVehicles;
-
-[_vehicles, "BGD_fnc_showLandVehicles", (owner _player)] spawn BIS_fnc_MP;
+[[_vehicles], "BGD_fnc_showLandVehicles", (owner _player)] spawn BIS_fnc_MP;
