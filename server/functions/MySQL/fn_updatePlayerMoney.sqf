@@ -9,8 +9,8 @@
 */
 private ["_vehicleId","_vehicle","_sql"];
 _playerUid = [_this,0,"",[""]] call BIS_fnc_param;
-_playerMoney = [_this,1,0,[0]] call BIS_fnc_param;
-_moneyType = [_this,2,0,[0]] call BIS_fnc_param;
+_moneyType = [_this,1,0,[0]] call BIS_fnc_param;
+_playerMoney = [_this,2,0,[0]] call BIS_fnc_param;
 
 // Verify playerid
 if (_playerUid == "") exitWith {"Invalid PlayerUid"};
