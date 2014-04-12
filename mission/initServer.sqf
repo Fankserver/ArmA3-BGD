@@ -4,4 +4,4 @@
 	Description:
 	Starts the initialization of the server.
 */
-[] call compile PreprocessFileLineNumbers "\bgd_server\imit.sqf";
+[] call compile PreprocessFileLineNumbers "\bgd_server\init.sqf";
