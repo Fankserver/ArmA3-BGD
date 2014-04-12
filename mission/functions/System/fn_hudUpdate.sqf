@@ -6,20 +6,13 @@
 	Description:
 	-
 */
-private["_hud","_health","_money"];
+private["_hud","_status"];
 disableSerialization;
 
-_hud = uiNameSpace getVariable ["playerHUD", displayNull];
+1000 cutRsc ["playerHUD","PLAIN"];
+_hud = uiNameSpace getVariable ["PlayerHUD", displayNull];
 if(isNull _hud) exitWith {};
-_health = _hud displayCtrl 23500;
-_money = _hud displayCtrl 23501;
+_status = _hud displayCtrl 3500;
 
-//Update health
-_health ctrlSetPosition [(safeZoneX + safeZoneW - 0.090), (safeZoneY + safeZoneH - 0.502)];
-_health ctrlSetText format["%1", round((1 - (damage player)) * 100)];
-_health ctrlCommit 0;
-
-//Update money
-_money ctrlSetPosition [(safeZoneX + safeZoneW - 0.090), (safeZoneY + safeZoneH - 0.456)];
-_money ctrlSetText format["%1", BGD_money];
-_money ctrlCommit 0;
+_status ctrlSetStructuredText parseText format ["%1 <img size='0.8' image='icons\health.paa'/><br/>%2 <img size='0.8' image='icons\money.paa'/>", round((1 - (damage player)) * 100), [BGD_money] call BGD_fnc_numberText];
+_status ctrlCommit 0;

@@ -17,8 +17,8 @@ link4[] = {4,6};
 link5[] = {5,2};
 link6[] = {6,7};
 link7[] = {7,5};
-globals[] = {0.000000,0,0,0,0,640,480,1,11,6316128,1,-653.731750,272.309174,25.888153,-510.209259,1319,895,1};
-window[] = {2,1920,0,-1,-1,922,533,4853,132,3,1337};
+globals[] = {0.000000,0,0,0,0,640,480,1,11,6316128,1,-653.731750,272.309174,25.888153,-510.209259,1319,951,1};
+window[] = {2,-1,-1,-1,-1,965,175,4495,175,3,1337};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -30,9 +30,7 @@ class FSM
     {
       name = "Init";
       init = /*%FSM<STATEINIT""">*/"private [""_lastHudUpdate""];" \n
-       "_lastHudUpdate = time;" \n
-       "" \n
-       "2 cutRsc [""playerHUD"",""PLAIN""];"/*%FSM</STATEINIT""">*/;
+       "_lastHudUpdate = time;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {

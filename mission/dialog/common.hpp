@@ -1,3 +1,36 @@
+#define CT_STATIC 0
+#define CT_BUTTON 1
+#define CT_EDIT 2
+#define CT_SLIDER 3
+#define CT_COMBO 4
+#define CT_LISTBOX 5
+#define CT_TOOLBOX 6
+#define CT_CHECKBOXES 7
+#define CT_PROGRESS 8
+#define CT_HTML 9
+#define CT_STATIC_SKEW 10
+#define CT_ACTIVETEXT 11
+#define CT_TREE 12
+#define CT_STRUCTURED_TEXT 13
+#define CT_CONTEXT_MENU 14
+#define CT_CONTROLS_GROUP 15
+#define CT_SHORTCUT_BUTTON 16 // Arma 2 - textured button
+#define CT_XKEYDESC 40
+#define CT_XBUTTON 41
+#define CT_XLISTBOX 42
+#define CT_XSLIDER 43
+#define CT_XCOMBO 44
+#define CT_ANIMATED_TEXTURE 45
+#define CT_OBJECT 80
+#define CT_OBJECT_ZOOM 81
+#define CT_OBJECT_CONTAINER 82
+#define CT_OBJECT_CONT_ANIM 83
+#define CT_LINEBREAK 98
+#define CT_USER 99
+#define CT_MAP 100
+#define CT_MAP_MAIN 101
+#define CT_List_N_Box 102 // Arma 2 - N columns list box
+
 class BGD_RscScrollBar
 {
 	color[] = {1,1,1,0.6};
