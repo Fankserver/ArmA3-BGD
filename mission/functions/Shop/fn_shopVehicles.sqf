@@ -1,6 +1,6 @@
 /*
 	Copyright © 2014 Florian "Fank" Kinder, All rights reserved
-	File: fn_localRespawn.sqf
+	File: fn_shopVehicles.sqf
 	Author: Florian "Fank" Kinder
 
 	Description:
