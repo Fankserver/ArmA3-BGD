@@ -32,23 +32,56 @@ _weaponPrice = (parseNumber (_weaponData select 2));
 // Enought money to buy the vehicle
 if (_playerMoney >= _weaponPrice) then {
 	_playerMoney = (_playerMoney - _weaponPrice);
-
-	diag_log primaryWeapon _player;
+	_canAdd = false;
 
 	_itemInfo = [(_weaponData select 1)] call BGD_fnc_configDetails;
-	if (_player canAdd configName (_itemInfo select 6) || (primaryWeapon _player) == "") then {
-		[_playerUid,1,0] spawn Database_fnc_updatePlayerMoney; // Update Cash
-		[_playerUid,2,_playerMoney] spawn Database_fnc_updatePlayerMoney; // Update Bank
+	switch (_itemInfo select 14) do {
+		case "CfgMagazines": {
+			if (_player canAdd configName (_itemInfo select 6)) then {
+				_canAdd = true;
+			};
 
-		switch (_itemInfo select 14) do {
-			case "CfgMagazines": {
+			if (_canAdd) then {
 				_player addMagazineGlobal (_weaponData select 1);
 			};
-			case "CfgWeapons": {
+		};
+		case "CfgWeapons": {
+			switch (getNumber((_itemInfo select 6) >> "type")) do {
+				// Primary
+				case 1: {
+					if (_player canAdd configName (_itemInfo select 6) || (primaryWeapon _player) == "") then {
+						_canAdd = true;
+					};
+				};
+				// Secondary
+				case 2: {
+					if (_player canAdd configName (_itemInfo select 6) || (handgunWeapon _player) == "") then {
+						_canAdd = true;
+					};
+				};
+				// Launcher
+				case 4: {
+					if (_player canAdd configName (_itemInfo select 6) || (secondaryWeapon _player) == "") then {
+						_canAdd = true;
+					};
+				};
+				// Other
+				default {
+					if (_player canAdd configName (_itemInfo select 6)) then {
+						_canAdd = true;
+					};
+				};
+			};
+
+			if (_canAdd) then {
 				_player addWeaponGlobal (_weaponData select 1);
 			};
 		};
+	};
 
+	if (_canAdd) then {
+		[_playerUid,1,0] spawn Database_fnc_updatePlayerMoney; // Update Cash
+		[_playerUid,2,_playerMoney] spawn Database_fnc_updatePlayerMoney; // Update Bank
 		[[_playerMoney], "BGD_fnc_moneyUpdate", (owner _player)] spawn BIS_fnc_MP;
 	}
 	else {
