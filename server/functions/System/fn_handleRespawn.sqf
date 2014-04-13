@@ -36,4 +36,4 @@ switch (_side) do {
 	};
 };
 
-[[(BGDS_tickets select 0), (BGDS_tickets select 1), (BGDS_tickets select 2)], "BGD_fnc_ticketUpdate"] spawn BIS_fnc_MP;
+[[(BGDS_tickets select 0), (BGDS_tickets select 1), (BGDS_tickets select 2)], "BGD_fnc_ticketUpdate", true] spawn BIS_fnc_MP;
