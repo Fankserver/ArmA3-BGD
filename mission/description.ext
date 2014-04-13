@@ -84,6 +84,7 @@ class CfgFunctions {
 		class System {
 			class numberText {};
 			class handleDamage {};
+			class handleKill {};
 			class localRespawn {};
 			class serverMessage {};
 			class hudUpdate {};
