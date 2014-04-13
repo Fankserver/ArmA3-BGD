@@ -31,5 +31,9 @@ _pool = ["eliminiert",
 _message = _pool call BIS_fnc_selectRandom;
 
 if (isPlayer _victim && not alive _victim) then {
-	[[1, format ["%1 wurde von %2 %3", name _victim, name _killer, _message]], "BGD_fnc_serverMessage"] spawn BIS_fnc_MP;
+	if (_victim != _killer) then {
+		[[1, format ["%1 wurde von %2 %3", name _victim, name _killer, _message]], "BGD_fnc_serverMessage"] spawn BIS_fnc_MP;
+	} else {
+		[[1, format ["%1 hat sich selbst %2", name _victim, _message]], "BGD_fnc_serverMessage"] spawn BIS_fnc_MP;
+    };
 };
