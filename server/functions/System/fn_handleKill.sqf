@@ -27,9 +27,9 @@ _pool = ["eliminiert",
 		 "zu Staub gemahlen",
 		 "mit Liebe überhäuft"
 		];
-		
+
 _message = _pool call BIS_fnc_selectRandom;
 
 if (isPlayer _victim && not alive _victim) then {
-	[[1, format ["%1 wurde von %2 %3", _victim, _killer, _message]], "BGD_fnc_serverMessage"] spawn BIS_fnc_MP;
+	[[1, format ["%1 wurde von %2 %3", name _victim, name _killer, _message]], "BGD_fnc_serverMessage"] spawn BIS_fnc_MP;
 };
