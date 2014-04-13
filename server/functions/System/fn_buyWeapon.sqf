@@ -7,7 +7,7 @@
 	Queries the MySQL data for the player information, if entry is not found
 	the result will return an empty array.
 */
-private ["_player","_weaponId","_playerUid","_playerData","_weaponData","_playerMoney","_vehiclePrice","_vehicle"];
+private ["_player","_weaponId","_playerUid","_playerData","_weaponData","_playerMoney","_weaponPrice","_itemInfo"];
 _player = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 _weaponId = [_this,1,0,[0]] call BIS_fnc_param;
 
@@ -33,12 +33,25 @@ _weaponPrice = (parseNumber (_weaponData select 2));
 if (_playerMoney >= _weaponPrice) then {
 	_playerMoney = (_playerMoney - _weaponPrice);
 
-	[_playerUid,1,0] spawn Database_fnc_updatePlayerMoney; // Update Cash
-	[_playerUid,2,_playerMoney] spawn Database_fnc_updatePlayerMoney; // Update Bank
+	_itemInfo = [(_weaponData select 1)] call BGD_fnc_configDetails;
+	if (_player canAdd (_itemInfo select 6)) then {
+		[_playerUid,1,0] spawn Database_fnc_updatePlayerMoney; // Update Cash
+		[_playerUid,2,_playerMoney] spawn Database_fnc_updatePlayerMoney; // Update Bank
 
-	_player addWeapon (_weaponData select 1);
+		switch (configName (_itemInfo select 13)) do {
+			case "CfgMagazines": {
+				_player addMagazineGlobal (_weaponData select 1);
+			};
+			case "CfgWeapons": {
+				_player addWeaponGlobal (_weaponData select 1);
+			};
+		};
 
-	[[_playerMoney], "BGD_fnc_moneyUpdate", (owner _player)] spawn BIS_fnc_MP;
+		[[_playerMoney], "BGD_fnc_moneyUpdate", (owner _player)] spawn BIS_fnc_MP;
+	}
+	else {
+		[[2, "OUT OF SPACE"], "BGD_fnc_serverMessage", (owner _player)] spawn BIS_fnc_MP;
+	};
 }
 else {
 	[[2, "OUT OF MONEY"], "BGD_fnc_serverMessage", (owner _player)] spawn BIS_fnc_MP;

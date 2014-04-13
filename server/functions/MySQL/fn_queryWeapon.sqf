@@ -15,6 +15,6 @@ _weapon = [];
 // Verify weaponid
 if (_weaponId == 0) exitWith {_weapon};
 
-_sql = "Altis-Life-Hive" callExtension format ["401:%1", _weaponId];
+_sql = "Altis-Life-Hive" callExtension format ["403:%1", _weaponId];
 _weapon = call compile format["%1", _sql];
 _weapon;

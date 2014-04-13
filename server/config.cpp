@@ -21,6 +21,7 @@ class CfgFunctions {
 			class queryVehicle {};
 			class queryVehicles {};
 			class queryWeapons {};
+			class queryWeapon {};
 			class updatePlayerMoney {};
 		};
 	};
