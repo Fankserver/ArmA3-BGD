@@ -6,4 +6,4 @@
 	Description:
 	-
 */
-[[_this], "BGDS_fnc_handleKill", false] spawn BIS_fnc_MP;
+[_this, "BGDS_fnc_handleKill", false] spawn BIS_fnc_MP;

@@ -33,8 +33,10 @@ _weaponPrice = (parseNumber (_weaponData select 2));
 if (_playerMoney >= _weaponPrice) then {
 	_playerMoney = (_playerMoney - _weaponPrice);
 
+	diag_log primaryWeapon _player;
+
 	_itemInfo = [(_weaponData select 1)] call BGD_fnc_configDetails;
-	if (_player canAdd (_itemInfo select 6)) then {
+	if (_player canAdd configName (_itemInfo select 6) || (primaryWeapon _player) == "") then {
 		[_playerUid,1,0] spawn Database_fnc_updatePlayerMoney; // Update Cash
 		[_playerUid,2,_playerMoney] spawn Database_fnc_updatePlayerMoney; // Update Bank
 
