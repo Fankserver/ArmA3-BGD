@@ -46,6 +46,8 @@ if (_playerMoney >= _weaponPrice) then {
 			};
 		};
 		case "CfgWeapons": {
+			_isItem = false;
+
 			switch (getNumber((_itemInfo select 6) >> "type")) do {
 				// Primary
 				case 1: {
@@ -67,6 +69,7 @@ if (_playerMoney >= _weaponPrice) then {
 				};
 				// Other
 				default {
+					_isItem = true;
 					if (_player canAdd configName (_itemInfo select 6)) then {
 						_canAdd = true;
 					};
@@ -74,7 +77,12 @@ if (_playerMoney >= _weaponPrice) then {
 			};
 
 			if (_canAdd) then {
-				_player addWeaponGlobal (_weaponData select 1);
+				if (_isItem) then {
+					_player addPrimaryWeaponItem (_weaponData select 1);
+				}
+				else {
+					_player addWeaponGlobal (_weaponData select 1);
+				};
 			};
 		};
 	};
