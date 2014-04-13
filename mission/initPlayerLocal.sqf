@@ -6,7 +6,7 @@ player addEventHandler ["Killed", BGD_fnc_handleKill];
 
 // Setup variables
 BGD_money = 0;
-BGD_tickets = [1000,1000,1000];
+BGD_tickets = [0,0,0];
 
 enableRadio false;
 0 fadeRadio 0;

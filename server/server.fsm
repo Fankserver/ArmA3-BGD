@@ -7,7 +7,7 @@ item2[] = {"Main",2,250,-43.121201,-362.019379,46.878815,-312.019379,0.000000,"M
 item3[] = {"",7,210,-329.432587,5.003694,-321.432587,13.003695,0.000000,""};
 item4[] = {"",7,210,-329.400635,-341.284943,-321.400635,-333.284943,0.000000,""};
 item5[] = {"Refill_box_",4,218,48.185043,-270.183350,138.184937,-220.183319,0.000000,"Refill box?"};
-item6[] = {"Refill_box",2,4346,48.031525,-192.304749,138.031342,-142.304764,0.000000,"Refill box"};
+item6[] = {"Refill_box",2,250,48.031525,-192.304749,138.031342,-142.304764,0.000000,"Refill box"};
 item7[] = {"true",8,218,47.938713,-117.867722,137.938721,-67.867722,0.000000,"true"};
 item8[] = {"",7,210,-2.780788,5.375949,5.219212,13.375947,0.000000,""};
 link0[] = {0,1};
@@ -79,7 +79,6 @@ class FSM
        "	_box = _x;" \n
        "	_cargo = [" \n
        "		[] // Backpack" \n
-       "		,[] // Vest" \n
        "		,[] // Item" \n
        "	];" \n
        "	" \n
@@ -91,13 +90,12 @@ class FSM
        "	switch (typeOf _box) do {" \n
        "		case ""Box_NATO_AmmoVeh_F"": {" \n
        "			_cargo set [0, [""B_Carryall_ocamo"",""B_Carryall_mcamo"",""B_FieldPack_ocamo"",""B_Bergen_mcamo"",""B_Bergen_rgr"",""B_Kitbag_mcamo""]];" \n
-       "			_cargo set [1, [""V_PlateCarrierIA1_dgtl"",""V_PlateCarrierIAGL_dgtl"",""V_BandollierB_cbr"",""V_Chestrig_khk"",""V_TacVest_camo""]];" \n
        "		};" \n
        "		case ""Box_East_AmmoVeh_F"": {" \n
-       "			_cargo set [2, [""muzzle_snds_H"",""muzzle_snds_L"",""muzzle_snds_M"",""muzzle_snds_B"",""muzzle_snds_H_MG"",""optic_Arco"",""optic_Hamr"",""optic_Aco"",""optic_Aco_smg"",""optic_Holosight"",""optic_Holosight_smg"",""optic_SOS"",""acc_pointer_IR"",""optic_MRCO"",""optic_DMS"",""muzzle_snds_acp"",""optic_LRPS"",""optic_NVS"",""optic_Nightstalker""]];" \n
+       "			_cargo set [1, [""muzzle_snds_H"",""muzzle_snds_L"",""muzzle_snds_M"",""muzzle_snds_B"",""muzzle_snds_H_MG"",""optic_Arco"",""optic_Hamr"",""optic_Aco"",""optic_Aco_smg"",""optic_Holosight"",""optic_Holosight_smg"",""optic_SOS"",""acc_pointer_IR"",""optic_MRCO"",""optic_DMS"",""muzzle_snds_acp"",""optic_LRPS"",""optic_NVS"",""optic_Nightstalker""]];" \n
        "		};" \n
        "		case ""Box_IND_AmmoVeh_F"": {" \n
-       "			_cargo set [2, [""MineDetector"",""Binocular"",""Rangefinder"",""NVGoggles"",""Medikit"",""ToolKit"",""Laserdesignator""]];" \n
+       "			_cargo set [1, [""MineDetector"",""Binocular"",""Rangefinder"",""NVGoggles"",""Medikit"",""ToolKit"",""Laserdesignator""]];" \n
        "		};" \n
        "		default {" \n
        "			deleteVehicle _box;" \n
@@ -108,16 +106,11 @@ class FSM
        "	{" \n
        "		_box addBackpackCargoGlobal [_x, 25];" \n
        "	} forEach (_cargo select 0);" \n
-       "" \n
-       "	// Adding vest" \n
-       "	{" \n
-       "		_box addVestCargoGlobal [_x, 25];" \n
-       "	} forEach (_cargo select 1);" \n
        "	" \n
        "	// Adding items" \n
        "	{" \n
        "		_box addWeaponCargoGlobal [_x, 5];" \n
-       "	} forEach (_cargo select 2);" \n
+       "	} forEach (_cargo select 1);" \n
        "} forEach (allMissionObjects ""ReammoBox_F"");" \n
        "_lastCargoUpdate = time;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
