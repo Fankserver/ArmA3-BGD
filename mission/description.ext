@@ -52,16 +52,16 @@ class RscTitles {
 				idc = 3501;
 				type = CT_STRUCTURED_TEXT;
 				size = 0.040;
-				x = 0.386 * SafeZoneW + SafeZoneX;
-				y = 0.0635 * SafeZoneH + SafeZoneY;
-				w = 0.65;
+				x = 0.52 * SafeZoneW + SafeZoneX;
+				y = 0.01 * SafeZoneH + SafeZoneY;
+				w = 0.4;
 				h = (1 / 25);
 				colorText[] = {1,1,1,1};
 				lineSpacing = 3;
 				colorBackground[] = {0,0,0,0};
 				text = "0 <img size='1' image='\a3\ui_f\data\map\Markers\Flags\nato_ca.paa'/>  0 <img size='1' image='\a3\ui_f\data\map\Markers\Flags\csat_ca.paa'/>  0 <img size='1' image='\a3\ui_f\data\map\Markers\Flags\altis_ca.paa'/>";
 				class Attributes {
-					align = "center";
+					align = "left";
 				};
 			};
 		};
@@ -72,6 +72,7 @@ class CfgFunctions {
 	class BGD {
 		class Action {
 			class buyVehicle {};
+			class buyWeapon {};
 		};
 		class Shop {
 			class shopVehicles {};
@@ -82,6 +83,7 @@ class CfgFunctions {
 			class showWeapons {};
 		};
 		class System {
+			class configDetails {};
 			class numberText {};
 			class handleDamage {};
 			class handleKill {};

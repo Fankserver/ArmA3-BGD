@@ -6,13 +6,13 @@
 	Description:
 	-
 */
-private["_vehicles","_control"];
+private["_weapons","_control"];
 disableSerialization;
-_vehicles = [_this,0,[],[[]]] call BIS_fnc_param;
+_weapons = [_this,0,[],[[]]] call BIS_fnc_param;
 
 waitUntil {!isNull (findDisplay 1100)};
 
-if(count _vehicles == 0) exitWith {
+if(count _weapons == 0) exitWith {
 	ctrlSetText[1101,"Keine Fahrzeuge vorhanden"];
 };
 
@@ -21,11 +21,9 @@ _control = ((findDisplay 1100) displayCtrl 1102);
 lbClear _control;
 
 {
-	_displayName = getText(configFile >> "CfgVehicles" >> (_x select 1) >> "displayName");
-	_picture = getText(configFile >> "CfgVehicles" >> (_x select 1) >> "picture");
-
-	_control lbAdd format["%1 - Wert: $%2", _displayName, [parseNumber (_x select 2)] call BGD_fnc_numberText];
-	_control lbSetData [(lbSize _control)-1,(_x select 1)];
-	_control lbSetValue [(lbSize _control)-1,(call compile format["%1", _x select 0])];
-	_control lbSetPicture [(lbSize _control)-1,_picture];
-} forEach _vehicles;
+	_itemInfo = [_x select 1] call BGD_fnc_configDetails;
+	_control lbAdd format ["%1 - Wert: $%2", (_itemInfo select 1), [parseNumber (_x select 2)] call BGD_fnc_numberText];
+	_control lbSetData [(lbSize _control)-1, (_itemInfo select 0)];
+	_control lbSetValue [(lbSize _control)-1, (call compile format["%1", _x select 0])];
+	_control lbSetPicture [(lbSize _control)-1, (_itemInfo select 2)];
+} forEach _weapons;

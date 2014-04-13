@@ -20,6 +20,7 @@ class CfgFunctions {
 			class queryPlayer {};
 			class queryVehicle {};
 			class queryVehicles {};
+			class queryWeapons {};
 			class updatePlayerMoney {};
 		};
 	};
@@ -27,7 +28,9 @@ class CfgFunctions {
 		class System {
 			file = "\bgd_server\functions\System";
 			class getVehicles {};
+			class getWeapons {};
 			class buyVehicle {};
+			class buyWeapon {};
 			class initVehicle {};
 			//class handleRespawn {};
 			class handleKill {};
