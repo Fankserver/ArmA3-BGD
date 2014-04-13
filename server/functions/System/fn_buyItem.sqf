@@ -68,21 +68,21 @@ if (_playerMoney >= _itemPrice) then {
 					};
 				};
 				// Other
-				default {
-					_isItem = true;
-					if (_player canAdd configName (_itemInfo select 6)) then {
-						_canAdd = true;
-					};
-				};
+				//default {
+				//	_isItem = true;
+				//	if (_player canAdd configName (_itemInfo select 6)) then {
+				//		_canAdd = true;
+				//	};
+				//};
 			};
 
 			if (_canAdd) then {
-				if (_isItem) then {
-					_player addPrimaryWeaponItem (_itemData select 1);
-				}
-				else {
+				//if (_isItem) then {
+				//	_player addPrimaryWeaponItem (_itemData select 1);
+				//}
+				//else {
 					_player addWeaponGlobal (_itemData select 1);
-				};
+				//};
 			};
 		};
 		// only client side spawn able
