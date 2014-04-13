@@ -18,14 +18,20 @@ _pool = ["eliminiert",
 		 "vernichtet",
 		 "flambiert",
 		 "zerstört",
-		 "in eine andere Dimension verlegt",
+		 "in eine andere Dimension befördert",
 		 "zu einem Pfannkuchen verarbeitet",
 		 "zerrissen",
 		 "zerpflückt",
 		 "zu Sushi verarbeitet",
 		 "zu Tode argumentiert",
 		 "zu Staub gemahlen",
-		 "mit Liebe überhäuft"
+		 "mit Liebe überhäuft",
+		 "platt gemacht",
+		 "durchlöchert",
+		 "halbiert",
+		 "komprimiert",
+		 "in einer Kiste nach Hause geschickt",
+		 "mit dem Käsehobel bearbeitet"
 		];
 
 _message = _pool call BIS_fnc_selectRandom;

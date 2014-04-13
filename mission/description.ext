@@ -91,6 +91,7 @@ class CfgFunctions {
 			class serverMessage {};
 			class hudUpdate {};
 			class moneyUpdate {};
+			class ticketUpdate {};
 		};
 	};
 };

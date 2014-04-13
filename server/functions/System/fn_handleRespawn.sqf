@@ -6,10 +6,34 @@
 	Description:
 	-
 */
-private ["_player","_corpse"];
+private ["_player","_corpse","_side","_counter"];
 _player = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 _corpse = [_this,1,objNull,[objNull]] call BIS_fnc_param;
 
-if (isPlayer _player) then {
-	[[1, format ["Respawn: %1 %2", _player, _corpse]], "BGD_fnc_serverMessage"] spawn BIS_fnc_MP;
+_side = side (group _player);
+
+switch (side) do {
+	case west: {
+		_counter = (BGDS_tickets select 0) - 1;
+		if (_counter < 0) then {
+			_counter = 0;
+		};
+		BGDS_tickets set [0, _counter];
+	};
+	case resistance:  {
+		_counter = (BGDS_tickets select 1) - 1;
+		if (_counter < 0) then {
+			_counter = 0;
+		};
+		BGDS_tickets set [1, _counter];
+	};
+	case civilian:  {
+		_counter = (BGDS_tickets select 2) - 1;
+		if (_counter < 0) then {
+			_counter = 0;
+		};
+		BGDS_tickets set [2, _counter];
+	};
 };
+
+[[(BGDS_tickets select 0), (BGDS_tickets select 1), (BGDS_tickets select 2)], "BGD_fnc_ticketUpdate"] spawn BIS_fnc_MP;
