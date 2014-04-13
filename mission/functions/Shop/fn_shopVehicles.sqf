@@ -18,4 +18,4 @@ createDialog "BGD_ShopVehicle";
 disableSerialization;
 ctrlSetText [1001, "Fetching Vehicles...."];
 
-[[player,_vehicleType],"BGDS_fnc_getVehicles"] spawn BIS_fnc_MP;
+[[player,_vehicleType], "BGDS_fnc_getVehicles", false, false] spawn BIS_fnc_MP;
