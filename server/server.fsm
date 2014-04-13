@@ -2,25 +2,32 @@
 /*%FSM<HEAD>*/
 /*
 item0[] = {"Init",0,250,-42.996120,-516.697754,47.003880,-466.697754,0.000000,"Init"};
-item1[] = {"true",8,4314,-43.350040,-442.335480,46.649960,-392.335480,0.000000,"true"};
+item1[] = {"true",8,218,-43.350040,-442.335480,46.649960,-392.335480,0.000000,"true"};
 item2[] = {"Main",2,250,-43.121201,-362.019379,46.878815,-312.019379,0.000000,"Main"};
 item3[] = {"",7,210,-329.432587,5.003694,-321.432587,13.003695,0.000000,""};
 item4[] = {"",7,210,-329.400635,-341.284943,-321.400635,-333.284943,0.000000,""};
-item5[] = {"Refill_box_",4,218,48.185043,-270.183350,138.184937,-220.183319,0.000000,"Refill box?"};
+item5[] = {"Refill_box__5min",4,218,48.185043,-270.183350,138.184937,-220.183319,0.000000,"Refill box?" \n "5min"};
 item6[] = {"Refill_box",2,250,48.031525,-192.304749,138.031342,-142.304764,0.000000,"Refill box"};
 item7[] = {"true",8,218,47.938713,-117.867722,137.938721,-67.867722,0.000000,"true"};
 item8[] = {"",7,210,-2.780788,5.375949,5.219212,13.375947,0.000000,""};
+item9[] = {"Base_cleanup__1m",4,218,-43.141357,-270.172058,46.858643,-220.171951,0.000000,"Base" \n "cleanup?" \n "1min"};
+item10[] = {"Cleanup_Base",2,250,-43.259548,-192.056641,46.740467,-142.056641,0.000000,"Cleanup Base"};
+item11[] = {"true",8,4314,-43.379948,-117.857986,46.620052,-67.857979,0.000000,"true"};
 link0[] = {0,1};
 link1[] = {1,2};
 link2[] = {2,5};
-link3[] = {3,4};
-link4[] = {4,2};
-link5[] = {5,6};
-link6[] = {6,7};
-link7[] = {7,8};
-link8[] = {8,3};
-globals[] = {0.000000,0,0,0,0,640,480,1,16,6316128,1,-416.869781,336.621429,29.487183,-557.119202,715,935,1};
-window[] = {2,0,0,-1,-1,844,-158,2414,54,3,733};
+link3[] = {2,9};
+link4[] = {3,4};
+link5[] = {4,2};
+link6[] = {5,6};
+link7[] = {6,7};
+link8[] = {7,8};
+link9[] = {8,3};
+link10[] = {9,10};
+link11[] = {10,11};
+link12[] = {11,8};
+globals[] = {0.000000,0,0,0,0,640,480,1,19,6316128,1,-311.070160,359.159058,167.329514,-338.044891,1240,935,1};
+window[] = {2,3840,0,-1,-1,976,3514,6086,186,3,1258};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -31,8 +38,11 @@ class FSM
     class Init
     {
       name = "Init";
-      init = /*%FSM<STATEINIT""">*/"private [""_lastCargoUpdate""];" \n
-       "_lastCargoUpdate = time - 3600;"/*%FSM</STATEINIT""">*/;
+      init = /*%FSM<STATEINIT""">*/"private [""_lastCargoUpdate"",""_lastBaseCleanup"",""_baseCleanupRange""];" \n
+       "_lastCargoUpdate = -300;" \n
+       "_lastBaseCleanup = time;" \n
+       "" \n
+       "_baseCleanupRange = 100;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
@@ -57,8 +67,18 @@ class FSM
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
-        /*%FSM<LINK "Refill_box_">*/
-        class Refill_box_
+        /*%FSM<LINK "Base_cleanup__1m">*/
+        class Base_cleanup__1m
+        {
+          priority = 0.000000;
+          to="Cleanup_Base";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(time - _lastBaseCleanup) >= 60"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Refill_box__5min">*/
+        class Refill_box__5min
         {
           priority = 0.000000;
           to="Refill_box";
@@ -111,12 +131,12 @@ class FSM
        "" \n
        "	// Adding vest" \n
        "	{" \n
-       "		_box addVestCargoGlobal [_x, 25];" \n
+       "		//_box addVestCargoGlobal [_x, 25];" \n
        "	} forEach (_cargo select 1);" \n
        "	" \n
        "	// Adding items" \n
        "	{" \n
-       "		_box addWeaponCargoGlobal [_x, 5];" \n
+       "		_box addItemCargoGlobal [_x, 5];" \n
        "	} forEach (_cargo select 2);" \n
        "} forEach (allMissionObjects ""ReammoBox_F"");" \n
        "_lastCargoUpdate = time;"/*%FSM</STATEINIT""">*/;
@@ -129,7 +149,39 @@ class FSM
           priority = 0.000000;
           to="Main";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Cleanup_Base">*/
+    class Cleanup_Base
+    {
+      name = "Cleanup_Base";
+      init = /*%FSM<STATEINIT""">*/"private [""_vehicles""];" \n
+       "_vehicles = [];" \n
+       "_vehicles = _vehicles + ((getMarkerPos ""respawn_west_01"") nearObjects [""AllVehicles"", _baseCleanupRange]);" \n
+       "_vehicles = _vehicles + ((getMarkerPos ""respawn_guerilla_01"") nearObjects [""AllVehicles"", _baseCleanupRange]);" \n
+       "_vehicles = _vehicles + ((getMarkerPos ""respawn_civilian_01"") nearObjects [""AllVehicles"", _baseCleanupRange]);" \n
+       "" \n
+       "{" \n
+       "	if (!alive _x) then {" \n
+       "		deleteVehicle _x;" \n
+       "	};" \n
+       "} forEach _vehicles;" \n
+       "_lastBaseCleanup = time;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "true">*/
+        class true
+        {
+          priority = 0.000000;
+          to="Main";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
