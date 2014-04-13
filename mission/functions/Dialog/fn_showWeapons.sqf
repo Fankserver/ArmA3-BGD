@@ -1,6 +1,6 @@
 /*
 	Copyright © 2014 Florian "Fank" Kinder, All rights reserved
-	File: fn_showVehicles.sqf
+	File: fn_showWeapons.sqf
 	Author: Florian "Fank" Kinder
 
 	Description:
@@ -10,14 +10,14 @@ private["_vehicles","_control"];
 disableSerialization;
 _vehicles = [_this,0,[],[[]]] call BIS_fnc_param;
 
-waitUntil {!isNull (findDisplay 1000)};
+waitUntil {!isNull (findDisplay 1100)};
 
 if(count _vehicles == 0) exitWith {
-	ctrlSetText[1001,"Keine Fahrzeuge vorhanden"];
+	ctrlSetText[1101,"Keine Fahrzeuge vorhanden"];
 };
 
-ctrlSetText[1001,"Verbindung OK"];
-_control = ((findDisplay 1000) displayCtrl 1002);
+ctrlSetText[1101,"Verbindung OK"];
+_control = ((findDisplay 1100) displayCtrl 1102);
 lbClear _control;
 
 {

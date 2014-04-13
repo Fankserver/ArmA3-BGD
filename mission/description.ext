@@ -16,6 +16,7 @@ class Header
 
 #include "dialog\common.hpp"
 #include "dialog\shopVehicle.hpp"
+#include "dialog\shopWeapon.hpp"
 
 class RscTitles {
 	titles[] = {PlayerHud};
@@ -36,7 +37,8 @@ class RscTitles {
 				size = 0.040;
 				x = safeZoneX + (safeZoneW * (1 - (0.30 / SafeZoneW)));
 				y = safeZoneY + (safeZoneH * (1 - (0.20 / SafeZoneH)));
-				w = 0.30; h = 0.20;
+				w = 0.30;
+				h = 0.20;
 				colorText[] = {1,1,1,1};
 				lineSpacing = 3;
 				colorBackground[] = {0,0,0,0};
@@ -44,6 +46,22 @@ class RscTitles {
 				shadow = 2;
 				class Attributes {
 					align = "right";
+				};
+			};
+			class PlayerHudTickets: BGD_RscText {
+				idc = 3501;
+				type = CT_STRUCTURED_TEXT;
+				size = 0.040;
+				x = 0.386 * SafeZoneW + SafeZoneX;
+				y = 0.0635 * SafeZoneH + SafeZoneY;
+				w = 0.65;
+				h = (1 / 25);
+				colorText[] = {1,1,1,1};
+				lineSpacing = 3;
+				colorBackground[] = {0,0,0,0};
+				text = "0 <img size='1' image='\a3\ui_f\data\map\Markers\Flags\nato_ca.paa'/>  0 <img size='1' image='\a3\ui_f\data\map\Markers\Flags\csat_ca.paa'/>  0 <img size='1' image='\a3\ui_f\data\map\Markers\Flags\altis_ca.paa'/>";
+				class Attributes {
+					align = "center";
 				};
 			};
 		};
@@ -57,9 +75,11 @@ class CfgFunctions {
 		};
 		class Shop {
 			class shopVehicles {};
+			class shopWeapons {};
 		};
 		class Dialog {
 			class showVehicles {};
+			class showWeapons {};
 		};
 		class System {
 			class numberText {};
@@ -71,7 +91,3 @@ class CfgFunctions {
 		};
 	};
 };
-
-class CfgSounds {};
-
-class CfgNotifications {};
