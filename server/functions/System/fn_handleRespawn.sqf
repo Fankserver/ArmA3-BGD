@@ -12,7 +12,7 @@ _corpse = [_this,1,objNull,[objNull]] call BIS_fnc_param;
 
 _side = side (group _player);
 
-switch (side) do {
+switch (_side) do {
 	case west: {
 		_counter = (BGDS_tickets select 0) - 1;
 		if (_counter < 0) then {
