@@ -9,6 +9,8 @@
 private ["_unit"];
 _unit = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 
+[_this, "BGDS_fnc_handleRespawn", false] spawn BIS_fnc_MP;
+
 removeVest _unit;
 removeBackpack _unit;
 

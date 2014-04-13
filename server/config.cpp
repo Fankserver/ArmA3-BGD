@@ -33,7 +33,7 @@ class CfgFunctions {
 			class buyVehicle {};
 			class buyWeapon {};
 			class initVehicle {};
-			//class handleRespawn {};
+			class handleRespawn {};
 			class handleKill {};
 			class onPlayerConnected {};
 		};
