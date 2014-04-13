@@ -86,6 +86,7 @@ class CfgFunctions {
 			class configDetails {};
 			class numberText {};
 			class handleDamage {};
+			class handleKill {};
 			class localRespawn {};
 			class serverMessage {};
 			class hudUpdate {};
