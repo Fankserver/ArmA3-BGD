@@ -38,7 +38,7 @@ if (_playerMoney >= _weaponPrice) then {
 		[_playerUid,1,0] spawn Database_fnc_updatePlayerMoney; // Update Cash
 		[_playerUid,2,_playerMoney] spawn Database_fnc_updatePlayerMoney; // Update Bank
 
-		switch (configName (_itemInfo select 13)) do {
+		switch (_itemInfo select 14) do {
 			case "CfgMagazines": {
 				_player addMagazineGlobal (_weaponData select 1);
 			};

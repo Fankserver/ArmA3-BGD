@@ -22,10 +22,8 @@ lbClear _control;
 
 {
 	_itemInfo = [_x select 1] call BGD_fnc_configDetails;
-	if (configName (_itemInfo select 13) in ["CfgMagazines","CfgWeapons"]) then {
-		_control lbAdd format ["%1 - Wert: $%2", (_itemInfo select 1), [parseNumber (_x select 2)] call BGD_fnc_numberText];
-		_control lbSetData [(lbSize _control)-1, (_itemInfo select 0)];
-		_control lbSetValue [(lbSize _control)-1, (call compile format["%1", _x select 0])];
-		_control lbSetPicture [(lbSize _control)-1, (_itemInfo select 2)];
-	};
+	_control lbAdd format ["%1 - Wert: $%2", (_itemInfo select 1), [parseNumber (_x select 2)] call BGD_fnc_numberText];
+	_control lbSetData [(lbSize _control)-1, (_itemInfo select 0)];
+	_control lbSetValue [(lbSize _control)-1, (call compile format["%1", _x select 0])];
+	_control lbSetPicture [(lbSize _control)-1, (_itemInfo select 2)];
 } forEach _weapons;

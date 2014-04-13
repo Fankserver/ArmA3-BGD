@@ -6,7 +6,7 @@
 	Description:
 	-
 */
-private["_entity","_config","_ret","_type","_acc_p","_acc_o","_acc_m","_scope","_displayName","_picture","_config","_itemInfo","_muzzles","_magazines","_desc","_base"];
+private["_entity","_config","_configType","_ret","_type","_acc_p","_acc_o","_acc_m","_scope","_displayName","_picture","_config","_itemInfo","_muzzles","_magazines","_desc","_base"];
 _entity = [_this,0,"",[""]] call BIS_fnc_param;
 _type = -1;
 _acc_p = [];
@@ -18,7 +18,7 @@ _muzzles = [];
 _magazines = [];
 
 if(_entity == "") exitWith {[]};
-_config = if(isNil {_this select 1}) then {
+_configType = if(isNil {_this select 1}) then {
 	switch (true) do {
 		case (isClass (configFile >> "CfgMagazines" >> _entity)) : {"CfgMagazines";};
 		case (isClass (configFile >> "CfgWeapons" >> _entity)) : {"CfgWeapons";};
@@ -31,13 +31,12 @@ else {
 };
 
 //Final Check
-
 _ret = [];
-if(typeName _config != "STRING") exitWith {[]}; //Not a config
-if(!isClass (configFile >> _config >> _entity)) exitWith {[]};
-if(_config == "") exitWith {[]}; //Not a config, who is passing bad data?
+if(typeName _configType != "STRING") exitWith {[]}; //Not a config
+if(!isClass (configFile >> _configType >> _entity)) exitWith {[]};
+if(_configType == "") exitWith {[]}; //Not a config, who is passing bad data?
 
-_config = configFile >> _config >> _entity;
+_config = configFile >> _configType >> _entity;
 _displayName = getText(_config >> "displayName");
 _picture = getText(_config >> "picture");
 _desc = getText(_config >> "descriptionshort");
@@ -94,5 +93,5 @@ switch (_config) do
 	};
 };
 
-_ret = [_entity,_displayName,_picture,_scope,_type,_itemInfo,_config,_magazines,_muzzles,_desc,_acc_p,_acc_o,_acc_m,_base];
+_ret = [_entity,_displayName,_picture,_scope,_type,_itemInfo,_config,_magazines,_muzzles,_desc,_acc_p,_acc_o,_acc_m,_base,_configType];
 _ret;
