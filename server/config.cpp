@@ -31,7 +31,7 @@ class CfgFunctions {
 			class getVehicles {};
 			class getWeapons {};
 			class buyVehicle {};
-			class buyWeapon {};
+			class buyItem {};
 			class initVehicle {};
 			class handleRespawn {};
 			class handleKill {};

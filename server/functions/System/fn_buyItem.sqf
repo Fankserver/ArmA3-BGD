@@ -7,12 +7,12 @@
 	Queries the MySQL data for the player information, if entry is not found
 	the result will return an empty array.
 */
-private ["_player","_weaponId","_playerUid","_playerData","_weaponData","_playerMoney","_weaponPrice","_itemInfo"];
+private ["_player","_itemId","_playerUid","_playerData","_itemData","_playerMoney","_itemPrice","_itemInfo"];
 _player = [_this,0,objNull,[objNull]] call BIS_fnc_param;
-_weaponId = [_this,1,0,[0]] call BIS_fnc_param;
+_itemId = [_this,1,0,[0]] call BIS_fnc_param;
 
 // Validate parameter
-if (_player == objNull || _weaponId == 0) exitWith {};
+if (_player == objNull || _itemId == 0) exitWith {};
 
 // Get player uid
 _playerUid = getPlayerUID _player;
@@ -23,18 +23,18 @@ _playerData = [_playerUid] call Database_fnc_queryPlayer;
 if ((count _playerData) == 0) exitWith {};
 
 // Get vehicle data
-_weaponData = [_weaponId] call Database_fnc_queryWeapon;
-if ((count _weaponData) == 0) exitWith {};
+_itemData = [_itemId] call Database_fnc_queryWeapon;
+if ((count _itemData) == 0) exitWith {};
 
 _playerMoney = (parseNumber (_playerData select 1)) + (parseNumber (_playerData select 2));
-_weaponPrice = (parseNumber (_weaponData select 2));
+_itemPrice = (parseNumber (_itemData select 2));
 
 // Enought money to buy the vehicle
-if (_playerMoney >= _weaponPrice) then {
-	_playerMoney = (_playerMoney - _weaponPrice);
+if (_playerMoney >= _itemPrice) then {
+	_playerMoney = (_playerMoney - _itemPrice);
 	_canAdd = false;
 
-	_itemInfo = [(_weaponData select 1)] call BGD_fnc_configDetails;
+	_itemInfo = [(_itemData select 1)] call BGD_fnc_configDetails;
 	switch (_itemInfo select 14) do {
 		case "CfgMagazines": {
 			if (_player canAdd configName (_itemInfo select 6)) then {
@@ -42,7 +42,7 @@ if (_playerMoney >= _weaponPrice) then {
 			};
 
 			if (_canAdd) then {
-				_player addMagazineGlobal (_weaponData select 1);
+				_player addMagazineGlobal (_itemData select 1);
 			};
 		};
 		case "CfgWeapons": {
@@ -78,13 +78,35 @@ if (_playerMoney >= _weaponPrice) then {
 
 			if (_canAdd) then {
 				if (_isItem) then {
-					_player addPrimaryWeaponItem (_weaponData select 1);
+					_player addPrimaryWeaponItem (_itemData select 1);
 				}
 				else {
-					_player addWeaponGlobal (_weaponData select 1);
+					_player addWeaponGlobal (_itemData select 1);
 				};
 			};
 		};
+		// only client side spawn able
+		//case "CfgVehicles": {
+		//	_configParents = [(_itemInfo select 6), true] call BIS_fnc_returnParents;
+        //
+		//	// Backpack
+		//	if ("Bag_Base" in _configParents) then {
+		//		if (backpack _player == "") then {
+		//			_canAdd = true;
+		//			_player addBackpackGlobal (_itemData select 1);
+		//		};
+		//	};
+        //
+		//	// Vest
+		//	if ("Vest_Base_F" in _configParents) then {
+		//		if (vest _player == "") then {
+		//			_canAdd = true;
+		//			_player addVestGlobal (_itemData select 1);
+		//		};
+		//		diag_log vest _player;
+		//	};
+		//	diag_log _configParents;
+		//};
 	};
 
 	if (_canAdd) then {

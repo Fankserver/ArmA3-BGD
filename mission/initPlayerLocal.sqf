@@ -9,5 +9,6 @@ BGD_money = 0;
 BGD_tickets = [1000,1000,1000];
 
 enableRadio false;
+0 fadeRadio 0;
 
 [] execFSM "client.fsm";

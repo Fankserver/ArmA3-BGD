@@ -14,4 +14,4 @@ _weaponId = lbValue[1102,(lbCurSel 1102)];
 
 if(isNil "_weapon") exitWith {hint "Fehler bei der Auswahl"};
 
-[[player, _weaponId], "BGDS_fnc_buyWeapon"] spawn BIS_fnc_MP;
+[[player, _weaponId], "BGDS_fnc_buyItem"] spawn BIS_fnc_MP;
