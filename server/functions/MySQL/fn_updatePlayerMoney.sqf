@@ -19,10 +19,10 @@ _playerMoney = [_playerMoney] call Database_fnc_numberSafe;
 
 // Cash update
 if (_moneyType == 1) then {
-	"Altis-Life-Hive" callExtension format ["114:%1:%2", _playerUid, _playerMoney];
+	//"Altis-Life-Hive" callExtension format ["114:%1:%2", _playerUid, _playerMoney];
 };
 
 // Bank update
 if (_moneyType == 2) then {
-	"Altis-Life-Hive" callExtension format ["115:%1:%2", _playerUid, _playerMoney];
+	//"Altis-Life-Hive" callExtension format ["115:%1:%2", _playerUid, _playerMoney];
 };
