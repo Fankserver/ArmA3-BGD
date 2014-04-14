@@ -1,4 +1,4 @@
-/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, BGD Server FSM">*/
+/*%FSM<COMPILE "D:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, BGD Server FSM">*/
 /*%FSM<HEAD>*/
 /*
 item0[] = {"Init",0,250,-42.996120,-516.697754,47.003880,-466.697754,0.000000,"Init"};
@@ -12,22 +12,29 @@ item7[] = {"true",8,218,47.938713,-117.867722,137.938721,-67.867722,0.000000,"tr
 item8[] = {"",7,210,-2.780788,5.375949,5.219212,13.375947,0.000000,""};
 item9[] = {"Base_cleanup__1m",4,218,-43.141357,-270.172058,46.858643,-220.171951,0.000000,"Base" \n "cleanup?" \n "1min"};
 item10[] = {"Cleanup_Base",2,250,-43.259548,-192.056641,46.740467,-142.056641,0.000000,"Cleanup Base"};
-item11[] = {"true",8,4314,-43.379948,-117.857986,46.620052,-67.857979,0.000000,"true"};
+item11[] = {"true",8,218,-43.379948,-117.857986,46.620052,-67.857979,0.000000,"true"};
+item12[] = {"Vehicle_cleanup",4,218,-134.586700,-270.385376,-44.586609,-220.385345,0.000000,"Vehicle" \n "cleanup?" \n "10min"};
+item13[] = {"Cleanup_destoryed",2,250,-133.934250,-192.107864,-43.934219,-142.107864,0.000000,"Cleanup" \n "destoryed" \n "Vehicles"};
+item14[] = {"true",8,218,-133.955353,-117.893333,-43.955383,-67.893333,0.000000,"true"};
 link0[] = {0,1};
 link1[] = {1,2};
 link2[] = {2,5};
 link3[] = {2,9};
-link4[] = {3,4};
-link5[] = {4,2};
-link6[] = {5,6};
-link7[] = {6,7};
-link8[] = {7,8};
-link9[] = {8,3};
-link10[] = {9,10};
-link11[] = {10,11};
-link12[] = {11,8};
-globals[] = {0.000000,0,0,0,0,640,480,1,19,6316128,1,-311.070160,359.159058,167.329514,-338.044891,1240,935,1};
-window[] = {2,3840,0,-1,-1,976,3514,6086,186,3,1258};
+link4[] = {2,12};
+link5[] = {3,4};
+link6[] = {4,2};
+link7[] = {5,6};
+link8[] = {6,7};
+link9[] = {7,8};
+link10[] = {8,3};
+link11[] = {9,10};
+link12[] = {10,11};
+link13[] = {11,8};
+link14[] = {12,13};
+link15[] = {13,14};
+link16[] = {14,8};
+globals[] = {0.000000,0,0,0,0,640,480,1,22,6316128,1,-434.810211,304.783569,80.640938,-558.153320,1240,1071,1};
+window[] = {2,-1,-1,-1,-1,840,1970,4542,50,3,1258};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -38,11 +45,13 @@ class FSM
     class Init
     {
       name = "Init";
-      init = /*%FSM<STATEINIT""">*/"private [""_lastCargoUpdate"",""_lastBaseCleanup"",""_baseCleanupRange""];" \n
+      init = /*%FSM<STATEINIT""">*/"private [""_lastCargoUpdate"",""_lastBaseCleanup"",""_lastVehicleCleanup"",""_baseCleanupRange"",""_vehicleCleanupTime""];" \n
        "_lastCargoUpdate = -300;" \n
        "_lastBaseCleanup = time;" \n
+       "_lastVehicleCleanup = time;" \n
        "" \n
-       "_baseCleanupRange = 100;"/*%FSM</STATEINIT""">*/;
+       "_baseCleanupRange = 100;" \n
+       "_vehicleCleanupTime = 3600;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
@@ -74,6 +83,16 @@ class FSM
           to="Cleanup_Base";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
           condition=/*%FSM<CONDITION""">*/"(time - _lastBaseCleanup) >= 60"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Vehicle_cleanup">*/
+        class Vehicle_cleanup
+        {
+          priority = 0.000000;
+          to="Cleanup_destoryed";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(time - _lastVehicleCleanup) >= 600"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -172,6 +191,32 @@ class FSM
        "	};" \n
        "} forEach _vehicles;" \n
        "_lastBaseCleanup = time;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "true">*/
+        class true
+        {
+          priority = 0.000000;
+          to="Main";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Cleanup_destoryed">*/
+    class Cleanup_destoryed
+    {
+      name = "Cleanup_destoryed";
+      init = /*%FSM<STATEINIT""">*/"{" \n
+       "	if (!alive _x && (time - (_x getVariable [""timeKilled"", time])) >= _vehicleCleanupTime) then {" \n
+       "		deleteVehicle _x;" \n
+       "	};" \n
+       "} forEach vehicles;" \n
+       "_lastVehicleCleanup = time;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {

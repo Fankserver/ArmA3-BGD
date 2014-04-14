@@ -17,3 +17,10 @@ clearItemCargoGlobal _vehicle;
 clearMagazineCargoGlobal _vehicle;
 clearWeaponCargoGlobal _vehicle;
 clearBackpackCargoGlobal _vehicle;
+
+// Eventhandlers
+_vehicle addEventHandler ["Killed", {
+	private ["_unit"];
+	_unit = [_this,0,objNull,[objNull]] call BIS_fnc_param;
+	_unit setVariable ["timeKilled", time];
+}];
