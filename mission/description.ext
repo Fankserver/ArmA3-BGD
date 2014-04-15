@@ -2,10 +2,10 @@ author = $STR_BGD_MISSION_AUTHORS;
 onLoadName = $STR_BGD_MISSION_SHORT_NAME;
 onLoadMission = $STR_BGD_MISSION_SHORT_DESCRIPTION;
 joinUnassigned = 1;
-respawn = BASE;
+respawn = "BASE";
 respawndelay = 10;
 disabledAI = true;
-disableChannels[]={0,1,2};
+disableChannels[] = {0,2,3};
 
 class Header
 {
