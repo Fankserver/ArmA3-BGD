@@ -55,7 +55,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=64;
+		items=60;
 		class Item0
 		{
 			side="WEST";
@@ -73,6 +73,7 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="fed_1";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item1
@@ -85,6 +86,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_2";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item2
@@ -97,6 +99,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_3";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item3
@@ -109,6 +112,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_4";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item4
@@ -121,6 +125,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_5";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item5
@@ -133,6 +138,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_6";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item6
@@ -145,6 +151,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_7";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item7
@@ -157,6 +164,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_8";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item8
@@ -169,6 +177,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_9";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item9
@@ -181,6 +190,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_10";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item10
@@ -193,6 +203,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_11";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item11
@@ -205,6 +216,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_12";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item12
@@ -217,6 +229,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_13";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item13
@@ -229,6 +242,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_14";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item14
@@ -241,6 +255,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_15";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item15
@@ -253,6 +268,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_16";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item16
@@ -265,6 +281,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_17";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item17
@@ -277,6 +294,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_18";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item18
@@ -289,6 +307,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_19";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item19
@@ -301,6 +320,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_20";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item20
@@ -313,6 +333,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_21";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item21
@@ -325,6 +346,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_22";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item22
@@ -337,6 +359,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_23";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item23
@@ -349,6 +372,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_24";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 				class Item24
@@ -361,6 +385,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="fed_25";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_FEDERAL_SLOT";
 				};
 			};
@@ -382,6 +407,7 @@ class Mission
 					leader=1;
 					skill=0.69999999;
 					text="reb_1";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item1
@@ -394,6 +420,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_2";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item2
@@ -406,6 +433,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_3";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item3
@@ -418,6 +446,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_4";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item4
@@ -430,6 +459,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_5";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item5
@@ -442,6 +472,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_6";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item6
@@ -454,6 +485,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_7";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item7
@@ -466,6 +498,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_8";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item8
@@ -478,6 +511,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_9";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item9
@@ -490,6 +524,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_10";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item10
@@ -502,6 +537,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_11";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item11
@@ -514,6 +550,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_12";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item12
@@ -526,6 +563,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_13";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item13
@@ -538,6 +576,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_14";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item14
@@ -550,6 +589,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_26";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item15
@@ -562,6 +602,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_15";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item16
@@ -574,6 +615,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_16";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item17
@@ -586,6 +628,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_17";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item18
@@ -598,6 +641,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_18";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item19
@@ -610,6 +654,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_19";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item20
@@ -622,6 +667,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_20";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item21
@@ -634,6 +680,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_21";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item22
@@ -646,6 +693,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_22";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item23
@@ -658,6 +706,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_23";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 				class Item24
@@ -670,6 +719,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.69999999;
 					text="reb_24";
+					init="[this] call BGD_fnc_localRespawn;";
 					description="@STR_BGD_GUER_SLOT";
 				};
 			};
@@ -679,7 +729,7 @@ class Mission
 			side="CIV";
 			class Vehicles
 			{
-				items=13;
+				items=17;
 				class Item0
 				{
 					position[]={14086.34,11.547821,11557.55};
@@ -840,15 +890,7 @@ class Mission
 					text="TGuerLandLight";
 					init="this enableSimulation false; this allowDamage false; removeAllWeapons this; this addAction[""Fahrzeuge"",BGD_fnc_shopVehicles,3,0,false,false,"""",'vehicle player == player && playerSide == resistance'];";
 				};
-			};
-		};
-		class Item3
-		{
-			side="CIV";
-			class Vehicles
-			{
-				items=1;
-				class Item0
+				class Item13
 				{
 					position[]={11580.994,23.706078,11941.47};
 					azimut=127.995;
@@ -863,15 +905,7 @@ class Mission
 					syncId=1;
 					synchronizations[]={0};
 				};
-			};
-		};
-		class Item4
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
+				class Item14
 				{
 					position[]={22153.273,3.5302844,14451.608};
 					azimut=-177.78419;
@@ -882,15 +916,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 				};
-			};
-		};
-		class Item5
-		{
-			side="CIV";
-			class Vehicles
-			{
-				items=1;
-				class Item0
+				class Item15
 				{
 					position[]={14610.15,17.91,16747.078};
 					azimut=127.995;
@@ -905,15 +931,7 @@ class Mission
 					syncId=2;
 					synchronizations[]={0};
 				};
-			};
-		};
-		class Item6
-		{
-			side="CIV";
-			class Vehicles
-			{
-				items=1;
-				class Item0
+				class Item16
 				{
 					position[]={22142.391,3.6427808,14528.725};
 					azimut=177.17738;
@@ -929,7 +947,7 @@ class Mission
 				};
 			};
 		};
-		class Item7
+		class Item3
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1044,7 +1062,7 @@ class Mission
 				};
 			};
 		};
-		class Item8
+		class Item4
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1063,7 +1081,7 @@ class Mission
 				};
 			};
 		};
-		class Item9
+		class Item5
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1178,7 +1196,7 @@ class Mission
 				};
 			};
 		};
-		class Item10
+		class Item6
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1197,7 +1215,7 @@ class Mission
 				};
 			};
 		};
-		class Item11
+		class Item7
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1216,7 +1234,7 @@ class Mission
 				};
 			};
 		};
-		class Item12
+		class Item8
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1331,7 +1349,7 @@ class Mission
 				};
 			};
 		};
-		class Item13
+		class Item9
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1350,7 +1368,7 @@ class Mission
 				};
 			};
 		};
-		class Item14
+		class Item10
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1369,7 +1387,7 @@ class Mission
 				};
 			};
 		};
-		class Item15
+		class Item11
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1388,7 +1406,7 @@ class Mission
 				};
 			};
 		};
-		class Item16
+		class Item12
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1503,7 +1521,7 @@ class Mission
 				};
 			};
 		};
-		class Item17
+		class Item13
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1522,7 +1540,7 @@ class Mission
 				};
 			};
 		};
-		class Item18
+		class Item14
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1541,7 +1559,7 @@ class Mission
 				};
 			};
 		};
-		class Item19
+		class Item15
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1656,7 +1674,7 @@ class Mission
 				};
 			};
 		};
-		class Item20
+		class Item16
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1675,7 +1693,7 @@ class Mission
 				};
 			};
 		};
-		class Item21
+		class Item17
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1694,7 +1712,7 @@ class Mission
 				};
 			};
 		};
-		class Item22
+		class Item18
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1713,7 +1731,7 @@ class Mission
 				};
 			};
 		};
-		class Item23
+		class Item19
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1732,7 +1750,7 @@ class Mission
 				};
 			};
 		};
-		class Item24
+		class Item20
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1847,7 +1865,7 @@ class Mission
 				};
 			};
 		};
-		class Item25
+		class Item21
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1866,7 +1884,7 @@ class Mission
 				};
 			};
 		};
-		class Item26
+		class Item22
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1885,7 +1903,7 @@ class Mission
 				};
 			};
 		};
-		class Item27
+		class Item23
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1904,7 +1922,7 @@ class Mission
 				};
 			};
 		};
-		class Item28
+		class Item24
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1923,7 +1941,7 @@ class Mission
 				};
 			};
 		};
-		class Item29
+		class Item25
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2038,7 +2056,7 @@ class Mission
 				};
 			};
 		};
-		class Item30
+		class Item26
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2057,7 +2075,7 @@ class Mission
 				};
 			};
 		};
-		class Item31
+		class Item27
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2076,7 +2094,7 @@ class Mission
 				};
 			};
 		};
-		class Item32
+		class Item28
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2095,7 +2113,7 @@ class Mission
 				};
 			};
 		};
-		class Item33
+		class Item29
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2114,7 +2132,7 @@ class Mission
 				};
 			};
 		};
-		class Item34
+		class Item30
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2229,7 +2247,7 @@ class Mission
 				};
 			};
 		};
-		class Item35
+		class Item31
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2248,7 +2266,7 @@ class Mission
 				};
 			};
 		};
-		class Item36
+		class Item32
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2267,7 +2285,7 @@ class Mission
 				};
 			};
 		};
-		class Item37
+		class Item33
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2286,7 +2304,7 @@ class Mission
 				};
 			};
 		};
-		class Item38
+		class Item34
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2305,7 +2323,7 @@ class Mission
 				};
 			};
 		};
-		class Item39
+		class Item35
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2420,7 +2438,7 @@ class Mission
 				};
 			};
 		};
-		class Item40
+		class Item36
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2439,7 +2457,7 @@ class Mission
 				};
 			};
 		};
-		class Item41
+		class Item37
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2458,7 +2476,7 @@ class Mission
 				};
 			};
 		};
-		class Item42
+		class Item38
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2477,7 +2495,7 @@ class Mission
 				};
 			};
 		};
-		class Item43
+		class Item39
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2496,7 +2514,7 @@ class Mission
 				};
 			};
 		};
-		class Item44
+		class Item40
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2611,7 +2629,7 @@ class Mission
 				};
 			};
 		};
-		class Item45
+		class Item41
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2630,7 +2648,7 @@ class Mission
 				};
 			};
 		};
-		class Item46
+		class Item42
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2649,7 +2667,7 @@ class Mission
 				};
 			};
 		};
-		class Item47
+		class Item43
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2668,7 +2686,7 @@ class Mission
 				};
 			};
 		};
-		class Item48
+		class Item44
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2687,7 +2705,7 @@ class Mission
 				};
 			};
 		};
-		class Item49
+		class Item45
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2802,7 +2820,7 @@ class Mission
 				};
 			};
 		};
-		class Item50
+		class Item46
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2821,7 +2839,7 @@ class Mission
 				};
 			};
 		};
-		class Item51
+		class Item47
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2840,7 +2858,7 @@ class Mission
 				};
 			};
 		};
-		class Item52
+		class Item48
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2859,7 +2877,7 @@ class Mission
 				};
 			};
 		};
-		class Item53
+		class Item49
 		{
 			side="EAST";
 			class Vehicles
@@ -2875,6 +2893,7 @@ class Mission
 					player="PLAY CDG";
 					leader=1;
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item1
 				{
@@ -2885,6 +2904,7 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item2
 				{
@@ -2895,6 +2915,7 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item3
 				{
@@ -2905,6 +2926,7 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item4
 				{
@@ -2915,6 +2937,7 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item5
 				{
@@ -2925,6 +2948,7 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item6
 				{
@@ -2935,6 +2959,7 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item7
 				{
@@ -2945,6 +2970,7 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item8
 				{
@@ -2955,6 +2981,7 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item9
 				{
@@ -2965,6 +2992,7 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item10
 				{
@@ -2975,6 +3003,7 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item11
 				{
@@ -2985,6 +3014,7 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item12
 				{
@@ -2995,6 +3025,7 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item13
 				{
@@ -3005,6 +3036,7 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item14
 				{
@@ -3015,6 +3047,7 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item15
 				{
@@ -3025,6 +3058,7 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item16
 				{
@@ -3035,6 +3069,7 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item17
 				{
@@ -3045,6 +3080,7 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item18
 				{
@@ -3055,6 +3091,7 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item19
 				{
@@ -3065,6 +3102,7 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item20
 				{
@@ -3075,6 +3113,7 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item21
 				{
@@ -3085,6 +3124,7 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item22
 				{
@@ -3095,6 +3135,7 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 				class Item23
 				{
@@ -3105,10 +3146,11 @@ class Mission
 					vehicle="O_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.5;
+					init="[this] call BGD_fnc_localRespawn;";
 				};
 			};
 		};
-		class Item54
+		class Item50
 		{
 			side="EAST";
 			class Vehicles
@@ -3127,7 +3169,7 @@ class Mission
 				};
 			};
 		};
-		class Item55
+		class Item51
 		{
 			side="LOGIC";
 			class Vehicles
@@ -3146,7 +3188,7 @@ class Mission
 				};
 			};
 		};
-		class Item56
+		class Item52
 		{
 			side="LOGIC";
 			class Vehicles
@@ -3165,7 +3207,7 @@ class Mission
 				};
 			};
 		};
-		class Item57
+		class Item53
 		{
 			side="LOGIC";
 			class Vehicles
@@ -3184,7 +3226,7 @@ class Mission
 				};
 			};
 		};
-		class Item58
+		class Item54
 		{
 			side="LOGIC";
 			class Vehicles
@@ -3203,7 +3245,7 @@ class Mission
 				};
 			};
 		};
-		class Item59
+		class Item55
 		{
 			side="LOGIC";
 			class Vehicles
@@ -3222,7 +3264,7 @@ class Mission
 				};
 			};
 		};
-		class Item60
+		class Item56
 		{
 			side="LOGIC";
 			class Vehicles
@@ -3241,7 +3283,7 @@ class Mission
 				};
 			};
 		};
-		class Item61
+		class Item57
 		{
 			side="LOGIC";
 			class Vehicles
@@ -3260,7 +3302,7 @@ class Mission
 				};
 			};
 		};
-		class Item62
+		class Item58
 		{
 			side="LOGIC";
 			class Vehicles
@@ -3279,7 +3321,7 @@ class Mission
 				};
 			};
 		};
-		class Item63
+		class Item59
 		{
 			side="LOGIC";
 			class Vehicles
