@@ -20,14 +20,14 @@ switch (_side) do {
 		};
 		BGDS_tickets set [0, _counter];
 	};
-	case resistance:  {
+	case east:  {
 		_counter = (BGDS_tickets select 1) - 1;
 		if (_counter < 0) then {
 			_counter = 0;
 		};
 		BGDS_tickets set [1, _counter];
 	};
-	case civilian:  {
+	case resistance:  {
 		_counter = (BGDS_tickets select 2) - 1;
 		if (_counter < 0) then {
 			_counter = 0;
@@ -36,4 +36,4 @@ switch (_side) do {
 	};
 };
 
-[[(BGDS_tickets select 0), (BGDS_tickets select 1), (BGDS_tickets select 2)], "BGD_fnc_ticketUpdate", true] spawn BIS_fnc_MP;
+[[(BGDS_tickets select 0), (BGDS_tickets select 1), (BGDS_tickets select 2)], "BGD_fnc_ticketUpdate", playableUnits] spawn BIS_fnc_MP;
