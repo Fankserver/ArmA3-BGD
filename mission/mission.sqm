@@ -15,7 +15,8 @@ class Mission
 		"a3_weapons_f_gamma_ammoboxes",
 		"a3_weapons_f_beta_ammoboxes",
 		"A3_Modules_F",
-		"A3_Characters_F_OPFOR"
+		"A3_Characters_F_OPFOR",
+		"A3_Static_F_Gamma_AA"
 	};
 	addOnsAuto[]=
 	{
@@ -30,6 +31,7 @@ class Mission
 		"A3_Weapons_F_Ammoboxes",
 		"a3_weapons_f_gamma_ammoboxes",
 		"a3_weapons_f_beta_ammoboxes",
+		"A3_Static_F_Gamma_AA",
 		"a3_map_altis"
 	};
 	randomSeed=3483010;
@@ -3343,7 +3345,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=25;
+		items=31;
 		class Item0
 		{
 			position[]={20793.09,27.927742,7267.5601};
@@ -3596,6 +3598,72 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_IND_AmmoVeh_F";
 			skill=0.60000002;
+		};
+		class Item25
+		{
+			position[]={20780.635,30.196939,7185.1924};
+			azimut=325;
+			id=172;
+			side="EMPTY";
+			vehicle="B_static_AA_F";
+			leader=1;
+			skill=0.69999999;
+			description="@STR_BGD_GUER_SLOT";
+		};
+		class Item26
+		{
+			position[]={20859.818,28.14962,7246.3335};
+			azimut=325;
+			id=173;
+			side="EMPTY";
+			vehicle="B_static_AA_F";
+			leader=1;
+			skill=0.69999999;
+			description="@STR_BGD_GUER_SLOT";
+		};
+		class Item27
+		{
+			position[]={26716.844,20.710625,24589.426};
+			azimut=215;
+			id=174;
+			side="EMPTY";
+			vehicle="O_static_AA_F";
+			leader=1;
+			skill=0.69999999;
+			description="@STR_BGD_GUER_SLOT";
+		};
+		class Item28
+		{
+			position[]={26782.707,20.844641,24659.715};
+			azimut=35;
+			id=175;
+			side="EMPTY";
+			vehicle="O_static_AA_F";
+			leader=1;
+			skill=0.69999999;
+			description="@STR_BGD_GUER_SLOT";
+		};
+		class Item29
+		{
+			position[]={9195.9014,14.386685,21680.516};
+			azimut=150;
+			id=176;
+			side="EMPTY";
+			vehicle="I_static_AA_F";
+			leader=1;
+			skill=0.69999999;
+			description="@STR_BGD_GUER_SLOT";
+		};
+		class Item30
+		{
+			position[]={9125.9814,14.959731,21604.385};
+			azimut=150;
+			id=177;
+			side="EMPTY";
+			vehicle="I_static_AA_F";
+			leader=1;
+			skill=0.69999999;
+			description="@STR_BGD_GUER_SLOT";
 		};
 	};
 	class Markers
