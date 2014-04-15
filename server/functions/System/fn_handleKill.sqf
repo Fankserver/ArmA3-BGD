@@ -37,6 +37,10 @@ _pool = [
 
 _message = _pool call BIS_fnc_selectRandom;
 
+diag_log "handleKill";
+diag_log _victim;
+diag_log _killer;
+
 if (isPlayer _victim && not alive _victim) then {
 	if (_victim != _killer) then {
 		[[1, format ["%1 wurde von %2 %3", name _victim, name _killer, _message]], "BGD_fnc_serverMessage"] spawn BIS_fnc_MP;
