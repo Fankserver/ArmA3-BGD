@@ -14,7 +14,7 @@ _weaponType = [_this,1,0,[0]] call BIS_fnc_param;
 if (_player == objNull) exitWith {};
 
 _playerSide = str(side _player);
-if (!(_playerSide in ["WEST","GUER","CIV"])) exitWith {};
+if (!(_playerSide in ["WEST","EAST","GUER"])) exitWith {};
 
 _weapons = [_playerSide,_weaponType] call Database_fnc_queryWeapons;
 [[_weapons], "BGD_fnc_showWeapons", (owner _player)] spawn BIS_fnc_MP;

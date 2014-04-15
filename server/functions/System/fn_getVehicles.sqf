@@ -14,7 +14,7 @@ _vehicleType = [_this,1,0,[0]] call BIS_fnc_param;
 if (_player == objNull) exitWith {};
 
 _playerSide = str(side _player);
-if (!(_playerSide in ["WEST","GUER","CIV"])) exitWith {};
+if (!(_playerSide in ["WEST","EAST","GUER"])) exitWith {};
 
 _vehicles = [_playerSide,_vehicleType] call Database_fnc_queryVehicles;
 [[_vehicles], "BGD_fnc_showVehicles", (owner _player)] spawn BIS_fnc_MP;
