@@ -1,7 +1,7 @@
 /*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, BGD Server FSM">*/
 /*%FSM<HEAD>*/
 /*
-item0[] = {"Init",0,4346,-42.996120,-516.697754,47.003880,-466.697754,0.000000,"Init"};
+item0[] = {"Init",0,250,-42.996120,-516.697754,47.003880,-466.697754,0.000000,"Init"};
 item1[] = {"true",8,218,-43.350040,-442.335480,46.649960,-392.335480,0.000000,"true"};
 item2[] = {"Main",2,250,-43.121201,-362.019379,46.878815,-312.019379,0.000000,"Main"};
 item3[] = {"",7,210,-329.432587,5.003694,-321.432587,13.003695,0.000000,""};
@@ -14,27 +14,34 @@ item9[] = {"Base_cleanup__1m",4,218,-43.141357,-270.172058,46.858643,-220.171951
 item10[] = {"Cleanup_Base",2,250,-43.259548,-192.056641,46.740467,-142.056641,0.000000,"Cleanup Base"};
 item11[] = {"true",8,218,-43.379948,-117.857986,46.620052,-67.857979,0.000000,"true"};
 item12[] = {"Vehicle_cleanup",4,218,-134.586700,-270.385376,-44.586609,-220.385345,0.000000,"Vehicle" \n "cleanup?" \n "10min"};
-item13[] = {"Cleanup_destoryed",2,250,-133.934250,-192.107864,-43.934219,-142.107864,0.000000,"Cleanup" \n "destoryed" \n "Vehicles"};
+item13[] = {"Cleanup_destroyed",2,250,-133.934250,-192.107864,-43.934219,-142.107864,0.000000,"Cleanup" \n "destroyed" \n "Vehicles"};
 item14[] = {"true",8,218,-133.955353,-117.893333,-43.955383,-67.893333,0.000000,"true"};
+item15[] = {"All_Sectors",4,218,141.615280,-270.681946,231.615265,-220.681900,0.000000,"All Sectors"};
+item16[] = {"Calculate__Sector",2,4346,139.952499,-192.936020,229.952515,-142.936020,0.000000,"Calculate" \n " Sector " \n "Control"};
+item17[] = {"true",8,218,141.880646,-117.737892,231.880646,-67.737892,0.000000,"true"};
 link0[] = {0,1};
 link1[] = {1,2};
 link2[] = {2,5};
 link3[] = {2,9};
 link4[] = {2,12};
-link5[] = {3,4};
-link6[] = {4,2};
-link7[] = {5,6};
-link8[] = {6,7};
-link9[] = {7,8};
-link10[] = {8,3};
-link11[] = {9,10};
-link12[] = {10,11};
-link13[] = {11,8};
-link14[] = {12,13};
-link15[] = {13,14};
-link16[] = {14,8};
-globals[] = {0.000000,0,0,0,0,640,480,1,22,6316128,1,-736.687073,606.659668,341.629547,-570.519470,1377,935,1};
-window[] = {2,0,0,-1,-1,923,-726,1846,133,3,1395};
+link5[] = {2,15};
+link6[] = {3,4};
+link7[] = {4,2};
+link8[] = {5,6};
+link9[] = {6,7};
+link10[] = {7,8};
+link11[] = {8,3};
+link12[] = {9,10};
+link13[] = {10,11};
+link14[] = {11,8};
+link15[] = {12,13};
+link16[] = {13,14};
+link17[] = {14,8};
+link18[] = {15,16};
+link19[] = {16,17};
+link20[] = {17,8};
+globals[] = {0.000000,0,0,0,0,640,480,1,25,6316128,1,-250.014603,427.991577,306.762451,-508.754883,710,854,1};
+window[] = {2,-1,-1,-32000,-32040,894,104,2676,104,3,728};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -45,14 +52,19 @@ class FSM
     class Init
     {
       name = "Init";
-      init = /*%FSM<STATEINIT""">*/"private [""_lastCargoUpdate"",""_lastBaseCleanup"",""_lastVehicleCleanup"",""_baseCleanupRange"",""_vehicleCleanupTime"",""_minimalCargoBackpack""];" \n
+      init = /*%FSM<STATEINIT""">*/"private [""_lastCargoUpdate"",""_lastBaseCleanup"",""_lastVehicleCleanup"",""_baseCleanupRange"",""_vehicleCleanupTime"",""_minimalCargoBackpack"",""_lastSectorUpdate"",""_sectorControlWest"",""_sectorControlEast"",""_sectorControlResistance""];" \n
        "_lastCargoUpdate = -300;" \n
        "_lastBaseCleanup = time;" \n
        "_lastVehicleCleanup = time;" \n
+       "_lastSectorUpdate = time;" \n
        "" \n
        "_baseCleanupRange = 100;" \n
        "_vehicleCleanupTime = 3600;" \n
-       "_minimalCargoBackpack = 25;"/*%FSM</STATEINIT""">*/;
+       "_minimalCargoBackpack = 25;" \n
+       "" \n
+       "_sectorControlWest = 0;" \n
+       "_sectorControlEast = 0;" \n
+       "_sectorControlResistance = 0;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
@@ -91,9 +103,19 @@ class FSM
         class Vehicle_cleanup
         {
           priority = 0.000000;
-          to="Cleanup_destoryed";
+          to="Cleanup_destroyed";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
           condition=/*%FSM<CONDITION""">*/"(time - _lastVehicleCleanup) >= 600"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "All_Sectors">*/
+        class All_Sectors
+        {
+          priority = 0.000000;
+          to="Calculate__Sector";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(time - _lastSectorUpdate) >= 5"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -229,10 +251,10 @@ class FSM
       };
     };
     /*%FSM</STATE>*/
-    /*%FSM<STATE "Cleanup_destoryed">*/
-    class Cleanup_destoryed
+    /*%FSM<STATE "Cleanup_destroyed">*/
+    class Cleanup_destroyed
     {
-      name = "Cleanup_destoryed";
+      name = "Cleanup_destroyed";
       init = /*%FSM<STATEINIT""">*/"{" \n
        "	if (!alive _x && (time - (_x getVariable [""timeKilled"", time])) >= _vehicleCleanupTime) then {" \n
        "		deleteVehicle _x;" \n
@@ -249,6 +271,45 @@ class FSM
           to="Main";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
           condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Calculate__Sector">*/
+    class Calculate__Sector
+    {
+      name = "Calculate__Sector";
+      init = /*%FSM<STATEINIT""">*/"private [""_allSectors"",""_control""];" \n
+       "_allSectors = [""antennaSector""];" \n
+       "" \n
+       "_sectorControlWest = 0;" \n
+       "_sectorControlEast = 0;" \n
+       "_sectorControlResistance = 0;" \n
+       "" \n
+       "{" \n
+       "	_sector = _x;" \n
+       " 	_control = _sector getVariable ""owner"";" \n
+       "	if (_control == west) then {" \n
+       "		_sectorControlWest = _sectorControlWest + 1;" \n
+       "	} else  (_control == east) then {" \n
+       "		_sectorControlEast = _sectorControlEast + 1;" \n
+       "	} else  (_control == resistance) then {" \n
+       "		_sectorControlResistance = _sectorControlResistance + 1;" \n
+       "	};" \n
+       "" \n
+       "} forEach _allSectors;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "true">*/
+        class true
+        {
+          priority = 0.000000;
+          to="Main";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
