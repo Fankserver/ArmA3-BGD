@@ -48,7 +48,7 @@ _killerOrg = _killer;
 _killerCrew = [];
 if (!isPlayer _killer) then {
 	_killerCrew = crew _killer;
-	_killer = driver _killer;
+	_killer = effectiveCommander _killer;
 };
 
 _baseMarkerPos = [0,0,0];
@@ -64,11 +64,16 @@ switch (faction _victim) do {
 	};
 };
 
-if ( (faction _victim) != (faction _killer) && (_victim distance _baseMarkerPos) <= 300 ) then {
+diag_log _victim;
+diag_log faction _victim;
+diag_log _killerOrg;
+diag_log faction _killerOrg;
+diag_log _killer;
+diag_log faction _killer;
+diag_log _killerCrew;
+
+if ((faction _victim) != (faction _killerOrg) && (_victim distance _baseMarkerPos) <= 300) then {
 	diag_log "ABUSE:";
-	diag_log _killer;
-	diag_log _killerOrg;
-	diag_log _killerCrew;
 
 	_killerCrewUIDs = [];
 	{
@@ -77,6 +82,9 @@ if ( (faction _victim) != (faction _killer) && (_victim distance _baseMarkerPos)
 			_x setDamage 1;
 		};
 	} forEach _killerCrew;
+	if (isPlayer _killerOrg) then {
+		_killerCrewUIDs = _killerCrewUIDs + [getPlayerUID _killerOrg];
+	};
 	_killerOrg setDamage 1;
 
 	diag_log _killerCrewUIDs;
