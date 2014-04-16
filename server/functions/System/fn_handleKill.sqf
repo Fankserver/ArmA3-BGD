@@ -6,7 +6,7 @@
 	Description:
 	-
 */
-private ["_victim","_corpse","_message","_pool","_killerOrg","_killerCrew","_baseMarkerPos","_killerCrewUIDs"];
+private ["_victim","_corpse","_message","_pool","_killerOrg","_killerCrew","_baseMarkerPos",,"_victimSide","_killerCrewUIDs"];
 _victim = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 _killer = [_this,1,objNull,[objNull]] call BIS_fnc_param;
 
