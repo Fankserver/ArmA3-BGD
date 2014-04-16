@@ -3694,7 +3694,7 @@ class Mission
 		class Item3
 		{
 			position[]={9195.9385,16.163715,21593.877};
-			name="base_guerilla";
+			name="base_resistance";
 			type="flag_Altis";
 		};
 		class Item4

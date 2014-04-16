@@ -6,7 +6,7 @@
 	Description:
 	-
 */
-private ["_victim","_corpse","_message","_pool"];
+private ["_victim","_corpse","_message","_pool","_killerOrg","_killerCrew","_baseMarkerPos","_killerCrewUIDs"];
 _victim = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 _killer = [_this,1,objNull,[objNull]] call BIS_fnc_param;
 
@@ -37,32 +37,35 @@ _pool = [
 
 _message = _pool call BIS_fnc_selectRandom;
 
+_killerOrg = _killer;
+_killerCrew = [];
 if (!isPlayer _killer) then {
 	_killerCrew = crew _killer;
 	_killer = driver _killer;
 };
 
 _baseMarkerPos = [0,0,0];
-switch (side _victim) do {
-	case west: {
+switch (faction _victim) do {
+	case "BLU_F": {
 		_baseMarkerPos = getMarkerPos "base_west";
 	};
-	case east: {
+	case "OPF_F": {
 		_baseMarkerPos = getMarkerPos "base_east";
 	};
-	case resistance: {
+	case "IND_F": {
 		_baseMarkerPos = getMarkerPos "base_resistance";
 	};
 };
 
-if ((_victim distance _baseMarkerPos) <= 300) then {
+if ((faction _victim) != (faction _killer) && (_victim distance _baseMarkerPos) <= 300) then {
 	_killerCrewUIDs = [];
 	{
 		if (alive _x) then {
 			_killerCrewUIDs = _killerCrewUIDs + [getPlayerUID _x];
-			serverCommand format["#kick %1", name _x];;
+			_x setDamage 1;
 		};
 	} forEach _killerCrew;
+	_killerOrg setDamage 1;
 
 	diag_log "ABUSE:";
 	diag_log _killerCrewUIDs;
