@@ -37,9 +37,9 @@ _pool = [
 
 _message = _pool call BIS_fnc_selectRandom;
 
-diag_log "handleKill";
-diag_log _victim;
-diag_log _killer;
+if (!isPlayer _killer) then {
+	_killer = driver _killer;
+};
 
 if (isPlayer _victim && not alive _victim) then {
 	if (_victim != _killer) then {
