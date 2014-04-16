@@ -1,0 +1,1 @@
+5 ^BGDS_ !=BGDS_fnc_(handleKill|handleRespawn|buyItem|buyVehicle|getVehicles|getWeapons)
