@@ -65,6 +65,11 @@ switch (faction _victim) do {
 };
 
 if ( (faction _victim) != (faction _killer) && (_victim distance _baseMarkerPos) <= 300 ) then {
+	diag_log "ABUSE:";
+	diag_log _killer;
+	diag_log _killerOrg;
+	diag_log _killerCrew;
+
 	_killerCrewUIDs = [];
 	{
 		if (alive _x) then {
@@ -74,7 +79,6 @@ if ( (faction _victim) != (faction _killer) && (_victim distance _baseMarkerPos)
 	} forEach _killerCrew;
 	_killerOrg setDamage 1;
 
-	diag_log "ABUSE:";
 	diag_log _killerCrewUIDs;
 };
 
