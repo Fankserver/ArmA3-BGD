@@ -1041,13 +1041,13 @@ class Mission
 						};
 						class Item13
 						{
-							value="2";
+							value="0";
 							parentCls="ModuleSector_F";
 							typeName="CostAir";
 						};
 						class Item14
 						{
-							value="2";
+							value="1";
 							parentCls="ModuleSector_F";
 							typeName="CostPlayers";
 						};
@@ -1175,13 +1175,13 @@ class Mission
 						};
 						class Item13
 						{
-							value="2";
+							value="0";
 							parentCls="ModuleSector_F";
 							typeName="CostAir";
 						};
 						class Item14
 						{
-							value="2";
+							value="1";
 							parentCls="ModuleSector_F";
 							typeName="CostPlayers";
 						};
@@ -1328,13 +1328,13 @@ class Mission
 						};
 						class Item13
 						{
-							value="2";
+							value="0";
 							parentCls="ModuleSector_F";
 							typeName="CostAir";
 						};
 						class Item14
 						{
-							value="2";
+							value="1";
 							parentCls="ModuleSector_F";
 							typeName="CostPlayers";
 						};
@@ -1500,13 +1500,13 @@ class Mission
 						};
 						class Item13
 						{
-							value="2";
+							value="0";
 							parentCls="ModuleSector_F";
 							typeName="CostAir";
 						};
 						class Item14
 						{
-							value="2";
+							value="1";
 							parentCls="ModuleSector_F";
 							typeName="CostPlayers";
 						};
@@ -1653,13 +1653,13 @@ class Mission
 						};
 						class Item13
 						{
-							value="2";
+							value="0";
 							parentCls="ModuleSector_F";
 							typeName="CostAir";
 						};
 						class Item14
 						{
-							value="2";
+							value="1";
 							parentCls="ModuleSector_F";
 							typeName="CostPlayers";
 						};
@@ -1741,7 +1741,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={25719.75,17.872293,21261.578};
+					position[]={25670.08,21.090496,21378.488};
 					id=83;
 					side="LOGIC";
 					vehicle="SideOPFOR_F";
@@ -1760,7 +1760,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={25714.275,18.576952,21283.357};
+					position[]={25664.918,21.614925,21407.732};
 					class args
 					{
 						items=15;
@@ -1844,13 +1844,13 @@ class Mission
 						};
 						class Item13
 						{
-							value="2";
+							value="0";
 							parentCls="ModuleSector_F";
 							typeName="CostAir";
 						};
 						class Item14
 						{
-							value="2";
+							value="1";
 							parentCls="ModuleSector_F";
 							typeName="CostPlayers";
 						};
@@ -1875,7 +1875,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={25707.59,19.841982,21311.322};
+					position[]={25656.676,23.679972,21422.633};
 					id=85;
 					side="LOGIC";
 					vehicle="LocationArea_F";
@@ -1894,7 +1894,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={25731.373,18.026176,21272.494};
+					position[]={25681.703,21.171623,21389.404};
 					id=86;
 					side="LOGIC";
 					vehicle="SideResistance_F";
@@ -1913,7 +1913,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={25704.207,18.359957,21265.094};
+					position[]={25654.537,21.194201,21382.004};
 					id=87;
 					side="LOGIC";
 					vehicle="SideBLUFOR_F";
@@ -1932,7 +1932,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={8646.3975,185.64719,18202.689};
+					position[]={8432.8809,181.81743,18174.617};
 					id=88;
 					side="LOGIC";
 					vehicle="SideOPFOR_F";
@@ -1951,7 +1951,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={8640.9229,184.68707,18224.469};
+					position[]={8427.4063,180.62198,18196.396};
 					class args
 					{
 						items=15;
@@ -2035,13 +2035,13 @@ class Mission
 						};
 						class Item13
 						{
-							value="2";
+							value="0";
 							parentCls="ModuleSector_F";
 							typeName="CostAir";
 						};
 						class Item14
 						{
-							value="2";
+							value="1";
 							parentCls="ModuleSector_F";
 							typeName="CostPlayers";
 						};
@@ -2066,7 +2066,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={8634.2373,182.46638,18252.434};
+					position[]={8420.7207,180.47173,18224.361};
 					id=90;
 					side="LOGIC";
 					vehicle="LocationArea_F";
@@ -2085,7 +2085,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={8658.0205,185.36197,18213.605};
+					position[]={8444.5039,180.5161,18185.533};
 					id=91;
 					side="LOGIC";
 					vehicle="SideResistance_F";
@@ -2104,7 +2104,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={8630.8545,185.21141,18206.205};
+					position[]={8417.3379,182.73077,18178.133};
 					id=92;
 					side="LOGIC";
 					vehicle="SideBLUFOR_F";
@@ -2226,13 +2226,13 @@ class Mission
 						};
 						class Item13
 						{
-							value="2";
+							value="0";
 							parentCls="ModuleSector_F";
 							typeName="CostAir";
 						};
 						class Item14
 						{
-							value="2";
+							value="1";
 							parentCls="ModuleSector_F";
 							typeName="CostPlayers";
 						};
@@ -2417,13 +2417,13 @@ class Mission
 						};
 						class Item13
 						{
-							value="2";
+							value="0";
 							parentCls="ModuleSector_F";
 							typeName="CostAir";
 						};
 						class Item14
 						{
-							value="2";
+							value="1";
 							parentCls="ModuleSector_F";
 							typeName="CostPlayers";
 						};
@@ -2505,7 +2505,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3356.4934,-8.6413274e-005,12931.264};
+					position[]={3657.6658,10.840348,13064.619};
 					id=103;
 					side="LOGIC";
 					vehicle="SideOPFOR_F";
@@ -2524,7 +2524,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3353.8801,0.00029057215,12952.777};
+					position[]={3655.0525,10.473842,13086.133};
 					class args
 					{
 						items=15;
@@ -2608,13 +2608,13 @@ class Mission
 						};
 						class Item13
 						{
-							value="2";
+							value="0";
 							parentCls="ModuleSector_F";
 							typeName="CostAir";
 						};
 						class Item14
 						{
-							value="2";
+							value="1";
 							parentCls="ModuleSector_F";
 							typeName="CostPlayers";
 						};
@@ -2639,7 +2639,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3359.5774,2.0163012,12958.612};
+					position[]={3660.7498,10.482334,13091.968};
 					id=105;
 					side="LOGIC";
 					vehicle="LocationArea_F";
@@ -2658,7 +2658,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3367.4973,0,12935.337};
+					position[]={3668.6697,10.739657,13068.692};
 					id=106;
 					side="LOGIC";
 					vehicle="SideResistance_F";
@@ -2677,7 +2677,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3343.1282,0.011534945,12934.778};
+					position[]={3644.3005,10.445961,13068.134};
 					id=107;
 					side="LOGIC";
 					vehicle="SideBLUFOR_F";
@@ -2799,13 +2799,13 @@ class Mission
 						};
 						class Item13
 						{
-							value="2";
+							value="0";
 							parentCls="ModuleSector_F";
 							typeName="CostAir";
 						};
 						class Item14
 						{
-							value="2";
+							value="1";
 							parentCls="ModuleSector_F";
 							typeName="CostPlayers";
 						};
@@ -3694,7 +3694,7 @@ class Mission
 		class Item3
 		{
 			position[]={9195.9385,16.163715,21593.877};
-			name="base_resistance";
+			name="base_guerilla";
 			type="flag_Altis";
 		};
 		class Item4
@@ -3788,9 +3788,9 @@ class Mission
 		};
 		class Item5
 		{
-			position[]={25688.992,20.231455,21337.648};
-			a=30;
-			b=30;
+			position[]={25633.844,24.821377,21437.896};
+			a=17;
+			b=17;
 			activationBy="ANY";
 			interruptable=1;
 			age="UNKNOWN";
@@ -3803,7 +3803,7 @@ class Mission
 		};
 		class Item6
 		{
-			position[]={8615.6396,180.61922,18278.76};
+			position[]={8402.123,180.1456,18250.688};
 			a=15;
 			b=15;
 			activationBy="ANY";
@@ -3848,9 +3848,9 @@ class Mission
 		};
 		class Item9
 		{
-			position[]={3348.7551,2.637979,12979.029};
-			a=15;
-			b=15;
+			position[]={3649.9275,10.244997,13112.385};
+			a=20;
+			b=20;
 			activationBy="ANY";
 			interruptable=1;
 			age="UNKNOWN";
