@@ -3569,7 +3569,7 @@ class Mission
 			azimut=-49.402699;
 			id=168;
 			side="EMPTY";
-			vehicle="Box_NATO_AmmoVeh_F";
+			vehicle="Box_IND_AmmoVeh_F";
 			skill=0.60000002;
 		};
 		class Item22
