@@ -3526,6 +3526,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_NATO_AmmoVeh_F";
 			skill=0.60000002;
+			init="this enableSimulation false; this allowDamage false;";
 		};
 		class Item17
 		{
@@ -3535,6 +3536,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_East_AmmoVeh_F";
 			skill=0.60000002;
+			init="this enableSimulation false; this allowDamage false;";
 		};
 		class Item18
 		{
@@ -3544,6 +3546,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_IND_AmmoVeh_F";
 			skill=0.60000002;
+			init="this enableSimulation false; this allowDamage false;";
 		};
 		class Item19
 		{
@@ -3553,6 +3556,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_NATO_AmmoVeh_F";
 			skill=0.60000002;
+			init="this enableSimulation false; this allowDamage false;";
 		};
 		class Item20
 		{
@@ -3562,6 +3566,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_East_AmmoVeh_F";
 			skill=0.60000002;
+			init="this enableSimulation false; this allowDamage false;";
 		};
 		class Item21
 		{
@@ -3571,6 +3576,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_IND_AmmoVeh_F";
 			skill=0.60000002;
+			init="this enableSimulation false; this allowDamage false;";
 		};
 		class Item22
 		{
@@ -3580,6 +3586,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_NATO_AmmoVeh_F";
 			skill=0.60000002;
+			init="this enableSimulation false; this allowDamage false;";
 		};
 		class Item23
 		{
@@ -3589,6 +3596,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_East_AmmoVeh_F";
 			skill=0.60000002;
+			init="this enableSimulation false; this allowDamage false;";
 		};
 		class Item24
 		{
@@ -3598,6 +3606,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Box_IND_AmmoVeh_F";
 			skill=0.60000002;
+			init="this enableSimulation false; this allowDamage false;";
 		};
 		class Item25
 		{
