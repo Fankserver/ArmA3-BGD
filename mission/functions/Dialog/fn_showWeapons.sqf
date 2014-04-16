@@ -1,5 +1,5 @@
 /*
-	© 2014, Florian "Fank" Kinder, Niko "nano2k" Bochan. 
+	© 2014, Florian "Fank" Kinder, Niko "nano2k" Bochan.
 	Licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License
 	http://creativecommons.org/licenses/by-nc-nd/4.0/
 	File: fn_showWeapons.sqf
@@ -15,7 +15,7 @@ _weapons = [_this,0,[],[[]]] call BIS_fnc_param;
 waitUntil {!isNull (findDisplay 1100)};
 
 if(count _weapons == 0) exitWith {
-	ctrlSetText[1101,"Keine Fahrzeuge vorhanden"];
+	ctrlSetText[1101,"Keine Waffen vorhanden"];
 };
 
 ctrlSetText[1101,"Verbindung OK"];

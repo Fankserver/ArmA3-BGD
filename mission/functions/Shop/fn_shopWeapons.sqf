@@ -1,5 +1,5 @@
 /*
-	© 2014, Florian "Fank" Kinder, Niko "nano2k" Bochan. 
+	© 2014, Florian "Fank" Kinder, Niko "nano2k" Bochan.
 	Licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License
 	http://creativecommons.org/licenses/by-nc-nd/4.0/
 	File: fn_shopWeapons.sqf
@@ -19,5 +19,9 @@ createDialog "BGD_ShopWeapon";
 
 disableSerialization;
 ctrlSetText [1001, "Fetching Weapons...."];
+
+diag_log "BGDS_fnc_getWeapons";
+diag_log player;
+diag_log _weaponType;
 
 [[player,_weaponType], "BGDS_fnc_getWeapons", false, false] spawn BIS_fnc_MP;
