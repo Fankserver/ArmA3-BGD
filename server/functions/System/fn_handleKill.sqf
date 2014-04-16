@@ -48,23 +48,27 @@ _killerOrg = _killer;
 _killerCrew = [];
 if (!isPlayer _killer) then {
 	_killerCrew = crew _killer;
-	_killer = driver _killer;
+	_killer = effectiveCommander _killer;
 };
 
 _baseMarkerPos = [0,0,0];
+_victimSide = sideLogic;
 switch (faction _victim) do {
 	case "BLU_F": {
 		_baseMarkerPos = getMarkerPos "base_west";
+		_victimSide = west;
 	};
 	case "OPF_F": {
 		_baseMarkerPos = getMarkerPos "base_east";
+		_victimSide = east;
 	};
 	case "IND_F": {
 		_baseMarkerPos = getMarkerPos "base_resistance";
+		_victimSide = resistance;
 	};
 };
 
-if ( (faction _victim) != (faction _killer) && (_victim distance _baseMarkerPos) <= 300 ) then {
+if (_victimSide != (side _killer) && (_victim distance _baseMarkerPos) <= 300) then {
 	_killerCrewUIDs = [];
 	{
 		if (alive _x) then {
@@ -72,6 +76,9 @@ if ( (faction _victim) != (faction _killer) && (_victim distance _baseMarkerPos)
 			_x setDamage 1;
 		};
 	} forEach _killerCrew;
+	if (isPlayer _killerOrg) then {
+		_killerCrewUIDs = _killerCrewUIDs + [getPlayerUID _killerOrg];
+	};
 	_killerOrg setDamage 1;
 
 	diag_log "ABUSE:";
