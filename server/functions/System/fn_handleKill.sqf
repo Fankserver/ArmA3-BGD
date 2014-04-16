@@ -64,7 +64,7 @@ switch (faction _victim) do {
 	};
 };
 
-if ( ((faction _victim) != (faction _killer)) && (_victim distance _baseMarkerPos) <= 300) ) then {
+if ( (faction _victim) != (faction _killer) && (_victim distance _baseMarkerPos) <= 300 ) then {
 	_killerCrewUIDs = [];
 	{
 		if (alive _x) then {
