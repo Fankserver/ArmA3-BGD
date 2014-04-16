@@ -32,7 +32,14 @@ _pool = [
 	"halbiert",
 	"komprimiert",
 	"in einer Kiste nach Hause geschickt",
-	"mit dem Käsehobel bearbeitet"
+	"mit dem Käsehobel bearbeitet",
+	"durch 0 geteilt",
+	"gekürzt",
+	"unangespitzt in den Boden gerammt",
+	"massakriert",
+	"ins Jenseits befördert",
+	"mit Blei gefüttert",
+	"ein drittes Nasenloch verpasst"
 ];
 
 _message = _pool call BIS_fnc_selectRandom;
@@ -57,7 +64,7 @@ switch (faction _victim) do {
 	};
 };
 
-if ((faction _victim) != (faction _killer) && (_victim distance _baseMarkerPos) <= 300) then {
+if ( ((faction _victim) != (faction _killer)) && (_victim distance _baseMarkerPos) <= 300) ) then {
 	_killerCrewUIDs = [];
 	{
 		if (alive _x) then {
