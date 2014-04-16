@@ -20,8 +20,4 @@ createDialog "BGD_ShopWeapon";
 disableSerialization;
 ctrlSetText [1001, "Fetching Weapons...."];
 
-diag_log "BGDS_fnc_getWeapons";
-diag_log player;
-diag_log _weaponType;
-
 [[player,_weaponType], "BGDS_fnc_getWeapons", false, false] spawn BIS_fnc_MP;

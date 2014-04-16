@@ -103,9 +103,7 @@ if (_playerMoney >= _itemPrice) then {
 		//			_canAdd = true;
 		//			_player addVestGlobal (_itemData select 1);
 		//		};
-		//		diag_log vest _player;
 		//	};
-		//	diag_log _configParents;
 		//};
 	};
 
