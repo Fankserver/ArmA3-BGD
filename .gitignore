@@ -1,2 +1,5 @@
 *.pbo
 *.log
+
+# Project files
+*.komodoproject
