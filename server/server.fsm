@@ -40,8 +40,8 @@ link17[] = {14,8};
 link18[] = {15,16};
 link19[] = {16,17};
 link20[] = {17,8};
-globals[] = {0.000000,0,0,0,0,640,480,1,25,6316128,1,-308.766174,414.889160,210.814087,-524.902161,840,854,1};
-window[] = {2,-1,-1,-1,-41,972,182,2754,182,3,858};
+globals[] = {0.000000,0,0,0,0,640,480,1,25,6316128,1,-432.152008,465.599213,243.737640,-668.976196,840,854,1};
+window[] = {2,-1,-1,-32000,-32040,972,182,2754,182,3,858};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -282,7 +282,8 @@ class FSM
     {
       name = "Calculate__Sector";
       init = /*%FSM<STATEINIT""">*/"private [""_allSectors"",""_control""];" \n
-       "_allSectors = [antennaSector];" \n
+       "_allSectors = allMissionObjects ""ModuleSector_F"";" \n
+       "_sectorCount = count _allSectors;" \n
        "" \n
        "_sectorControlWest = 0;" \n
        "_sectorControlEast = 0;" \n
@@ -299,7 +300,11 @@ class FSM
        "		_sectorControlResistance = _sectorControlResistance + 1;" \n
        "	};" \n
        "" \n
-       "} forEach _allSectors;"/*%FSM</STATEINIT""">*/;
+       "} forEach _allSectors;" \n
+       "" \n
+       "if (_sectorControlWest > 0) then {" \n
+       "	" \n
+       "};"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
