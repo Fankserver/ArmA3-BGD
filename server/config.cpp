@@ -37,6 +37,7 @@ class CfgFunctions {
 			class handleKill {};
 			class onPlayerConnected {};
 			class vehicleMaintenance {};
+			class index {};
 		};
 	};
 };
