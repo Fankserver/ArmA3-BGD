@@ -36,6 +36,7 @@ class CfgFunctions {
 			class handleRespawn {};
 			class handleKill {};
 			class onPlayerConnected {};
+			class index {};
 		};
 	};
 };
