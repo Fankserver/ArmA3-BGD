@@ -6,28 +6,11 @@
 waitUntil {!isNull player && player == player};
 if(player diarySubjectExists "rules")exitwith{};
 
-player createDiarySubject ["sealteamsloth","We-Are-Friendly"];
+player createDiarySubject ["waf","We-Are-Friendly"];
 player createDiarySubject ["changelog","Changelog"];
 player createDiarySubject ["serverrules","Allgemeine Regeln"];
-//player createDiarySubject ["policerules","Polizei-Regeln"];
-//player createDiarySubject ["safezones","Safe Zones"];
-//player createDiarySubject ["illegalitems","Illegales"];
-//player createDiarySubject ["controls","Steuerung"];
 
-/*  Example
-	player createDiaryRecord ["", //Container
-		[
-			"", //Subsection
-				"
-				TEXT HERE<br/><br/>
-				"
-		]
-	];
-*/
-
-// Seal Team Sloth Section
-
-	player createDiaryRecord ["sealteamsloth",
+	player createDiaryRecord ["waf",
 		[
 			"Teamspeak",
 				"
@@ -37,7 +20,7 @@ player createDiarySubject ["serverrules","Allgemeine Regeln"];
 		]
 	];
 	
-	player createDiaryRecord ["sealteamsloth",
+	player createDiaryRecord ["waf",
 		[
 			"Website/Forums",
 				"
@@ -47,7 +30,7 @@ player createDiarySubject ["serverrules","Allgemeine Regeln"];
 		]
 	];
 	
-	player createDiaryRecord ["sealteamsloth",
+	player createDiaryRecord ["waf",
 		[
 			"Spenden",
 				"
