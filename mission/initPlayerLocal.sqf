@@ -14,4 +14,5 @@ BGD_money = 0;
 enableRadio false;
 0 fadeRadio 0;
 
+[] execVM "briefing.sqf"; //Load Briefing
 [] execFSM "client.fsm";
