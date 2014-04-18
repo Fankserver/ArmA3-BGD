@@ -16,8 +16,8 @@ item11[] = {"true",8,218,-43.379948,-117.857986,46.620052,-67.857979,0.000000,"t
 item12[] = {"Vehicle_cleanup",4,218,-134.586700,-270.385376,-44.586609,-220.385345,0.000000,"Vehicle" \n "cleanup?" \n "10min"};
 item13[] = {"Cleanup_destroyed",2,250,-133.934250,-192.107864,-43.934219,-142.107864,0.000000,"Cleanup" \n "destroyed" \n "Vehicles"};
 item14[] = {"true",8,218,-133.955353,-117.893333,-43.955383,-67.893333,0.000000,"true"};
-item15[] = {"All_Sectors",4,218,141.615280,-270.681946,231.615265,-220.681900,0.000000,"All Sectors"};
-item16[] = {"Calculate__Sector",2,4346,139.952499,-192.936020,229.952515,-142.936020,0.000000,"Calculate" \n " Sector " \n "Control"};
+item15[] = {"All_Sectors",4,4314,141.615280,-270.681946,231.615265,-220.681900,0.000000,"All Sectors"};
+item16[] = {"Calculate__Sector",2,250,139.952499,-192.936020,229.952515,-142.936020,0.000000,"Calculate" \n " Sector " \n "Control"};
 item17[] = {"true",8,218,141.880646,-117.737892,231.880646,-67.737892,0.000000,"true"};
 link0[] = {0,1};
 link1[] = {1,2};
@@ -40,8 +40,8 @@ link17[] = {14,8};
 link18[] = {15,16};
 link19[] = {16,17};
 link20[] = {17,8};
-globals[] = {0.000000,0,0,0,0,640,480,1,25,6316128,1,-432.152008,465.599213,243.737640,-668.976196,840,854,1};
-window[] = {2,-1,-1,-32000,-32040,972,182,2754,182,3,858};
+globals[] = {0.000000,0,0,0,0,640,480,1,25,6316128,1,-405.883881,439.330750,103.809052,-445.949005,1376,895,1};
+window[] = {2,-1,-1,-1,-1,912,3188,5760,122,3,1394};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -52,7 +52,7 @@ class FSM
     class Init
     {
       name = "Init";
-      init = /*%FSM<STATEINIT""">*/"private [""_lastCargoUpdate"",""_lastBaseCleanup"",""_lastVehicleCleanup"",""_baseCleanupRange"",""_vehicleCleanupTime"",""_minimalCargoBackpack"",""_lastSectorUpdate"",""_sectorControlWest"",""_sectorControlEast"",""_sectorControlResistance""];" \n
+      init = /*%FSM<STATEINIT""">*/"private [""_lastCargoUpdate"",""_lastBaseCleanup"",""_lastVehicleCleanup"",""_baseCleanupRange"",""_vehicleCleanupTime"",""_minimalCargoBackpack"",""_lastSectorUpdate"",""_allSectors"",""_sectorControlWest"",""_sectorControlEast"",""_sectorControlResistance""];" \n
        "_lastCargoUpdate = -300;" \n
        "_lastBaseCleanup = time;" \n
        "_lastVehicleCleanup = time;" \n
@@ -62,6 +62,7 @@ class FSM
        "_vehicleCleanupTime = 3600;" \n
        "_minimalCargoBackpack = 25;" \n
        "" \n
+       "_allSectors = allMissionObjects ""ModuleSector_F"";" \n
        "_sectorControlWest = 0;" \n
        "_sectorControlEast = 0;" \n
        "_sectorControlResistance = 0;"/*%FSM</STATEINIT""">*/;
@@ -281,30 +282,29 @@ class FSM
     class Calculate__Sector
     {
       name = "Calculate__Sector";
-      init = /*%FSM<STATEINIT""">*/"private [""_allSectors"",""_control""];" \n
-       "_allSectors = allMissionObjects ""ModuleSector_F"";" \n
-       "_sectorCount = count _allSectors;" \n
-       "" \n
-       "_sectorControlWest = 0;" \n
-       "_sectorControlEast = 0;" \n
-       "_sectorControlResistance = 0;" \n
+      init = /*%FSM<STATEINIT""">*/"private [""_tmpSC"",""_sector"",""_control""];" \n
+       "_tmpSC = [0,0,0];" \n
        "" \n
        "{" \n
        "	_sector = _x;" \n
        " 	_control = _sector getVariable [""owner"", sideUnknown];" \n
-       "	if (_control == west) then {" \n
-       "		_sectorControlWest = _sectorControlWest + 1;" \n
-       "	} else  (_control == east) then {" \n
-       "		_sectorControlEast = _sectorControlEast + 1;" \n
-       "	} else  (_control == resistance) then {" \n
-       "		_sectorControlResistance = _sectorControlResistance + 1;" \n
+       "	" \n
+       "	switch (_control) do {" \n
+       "		case west: {" \n
+       "			_tmpSC set [0, (_tmpSC select 0) + 1];" \n
+       "		};" \n
+       "		case east: {" \n
+       "			_tmpSC set [1, (_tmpSC select 1) + 1];" \n
+       "		};" \n
+       "		case resistance: {" \n
+       "			_tmpSC set [2, (_tmpSC select 2) + 1];" \n
+       "		};" \n
        "	};" \n
-       "" \n
        "} forEach _allSectors;" \n
        "" \n
-       "if (_sectorControlWest > 0) then {" \n
-       "	" \n
-       "};"/*%FSM</STATEINIT""">*/;
+       "_sectorControlWest = (_tmpSC select 0);" \n
+       "_sectorControlEast = (_tmpSC select 1);" \n
+       "_sectorControlResistance = (_tmpSC select 2);"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
@@ -314,7 +314,7 @@ class FSM
           priority = 0.000000;
           to="Main";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
