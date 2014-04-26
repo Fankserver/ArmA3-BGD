@@ -11,6 +11,8 @@ private ["_player","_itemId","_playerUid","_playerData","_itemData","_playerMone
 _player = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 _itemId = [_this,1,0,[0]] call BIS_fnc_param;
 
+diag_log ["BGDS_fnc_buyItem called", _player, _itemId];
+
 // Validate parameter
 if (_player == objNull || _itemId == 0) exitWith {};
 

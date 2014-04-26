@@ -10,6 +10,8 @@ private ["_player","_corpse","_side","_counter"];
 _player = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 _corpse = [_this,1,objNull,[objNull]] call BIS_fnc_param;
 
+diag_log ["BGDS_fnc_handleRespawn called", _player, _corpse];
+
 _side = side (group _player);
 
 switch (_side) do {

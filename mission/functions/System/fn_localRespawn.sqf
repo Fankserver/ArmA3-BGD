@@ -1,5 +1,5 @@
 /*
-	© 2014, Florian "Fank" Kinder, Niko "nano2k" Bochan. 
+	© 2014, Florian "Fank" Kinder, Niko "nano2k" Bochan.
 	Licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License
 	http://creativecommons.org/licenses/by-nc-nd/4.0/
 	File: fn_localRespawn.sqf
@@ -11,8 +11,9 @@
 private ["_unit"];
 _unit = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 
+diag_log "BIS_fnc_MP spawn 'BGDS_fnc_handleRespawn'";
 [_this, "BGDS_fnc_handleRespawn", false] spawn BIS_fnc_MP;
-
+diag_log "BIS_fnc_MP spawn 'BGDS_fnc_handleRespawn' done";
 //removeVest _unit;
 //removeBackpack _unit;
 

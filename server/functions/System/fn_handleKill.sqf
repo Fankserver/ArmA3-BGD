@@ -10,6 +10,8 @@ private ["_victim","_corpse","_message","_pool","_killerOrg","_killerCrew","_bas
 _victim = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 _killer = [_this,1,objNull,[objNull]] call BIS_fnc_param;
 
+diag_log ["BGDS_fnc_handleKill called", _victim, _killer];
+
 _pool = [
 	"eliminiert",
 	"durchsiebt",

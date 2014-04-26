@@ -12,6 +12,8 @@ _player = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 _vehicleId = [_this,1,0,[0]] call BIS_fnc_param;
 _spawnObject = [_this,2,objNull,[objNull]] call BIS_fnc_param;
 
+diag_log ["BGDS_fnc_buyVehicle called", _player, _vehicleId, _spawnObject];
+
 // Validate parameter
 if (_player == objNull || _vehicleId == 0 || _spawnObject == objNull) exitWith {};
 

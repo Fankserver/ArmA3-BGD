@@ -1,5 +1,5 @@
 /*
-	© 2014, Florian "Fank" Kinder, Niko "nano2k" Bochan. 
+	© 2014, Florian "Fank" Kinder, Niko "nano2k" Bochan.
 	Licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License
 	http://creativecommons.org/licenses/by-nc-nd/4.0/
 	File: fn_buyVehicle.sqf
@@ -18,5 +18,7 @@ if(isNil "_vehicle") exitWith {hint "Fehler bei der Auswahl"};
 
 _spawnObject = nearestObject [(getPos player), "Helipad_base_F"];
 
+diag_log "BIS_fnc_MP spawn 'BGDS_fnc_buyVehicle'";
 [[player, _vehicleId, _spawnObject], "BGDS_fnc_buyVehicle"] spawn BIS_fnc_MP;
+diag_log "BIS_fnc_MP spawn 'BGDS_fnc_buyVehicle' done";
 hint "Spawne Fahrzeug. Einen Moment bitte...";
