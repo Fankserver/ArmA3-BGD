@@ -16,26 +16,26 @@ _side = side (group _player);
 
 switch (_side) do {
 	case west: {
-		_counter = (BGDS_tickets select 0) - 1;
+		_counter = (BGD_tickets select 0) - 1;
 		if (_counter < 0) then {
 			_counter = 0;
 		};
-		BGDS_tickets set [0, _counter];
+		BGD_tickets set [0, _counter];
 	};
 	case east:  {
-		_counter = (BGDS_tickets select 1) - 1;
+		_counter = (BGD_tickets select 1) - 1;
 		if (_counter < 0) then {
 			_counter = 0;
 		};
-		BGDS_tickets set [1, _counter];
+		BGD_tickets set [1, _counter];
 	};
 	case resistance:  {
-		_counter = (BGDS_tickets select 2) - 1;
+		_counter = (BGD_tickets select 2) - 1;
 		if (_counter < 0) then {
 			_counter = 0;
 		};
-		BGDS_tickets set [2, _counter];
+		BGD_tickets set [2, _counter];
 	};
 };
 
-[[(BGDS_tickets select 0), (BGDS_tickets select 1), (BGDS_tickets select 2)], "BGD_fnc_ticketUpdate", playableUnits] spawn BIS_fnc_MP;
+[[(BGD_tickets select 0), (BGD_tickets select 1), (BGD_tickets select 2)], "BGD_fnc_ticketUpdate", playableUnits] spawn BIS_fnc_MP;
